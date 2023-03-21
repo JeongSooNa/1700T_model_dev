@@ -23,7 +23,7 @@ If necessary, we can request the co-work from the AI center team after completin
 <!-- download ZIP file in [GitHub](https://github.com/JeongSooNa/1700T_model_dev) -->
 <!-- ![jpg](IMG/1700T_readme.png) -->
 <!-- Unzip and open the demo.html file in the web_publishing folder. -->
-visit [main page](./demo_v1.0/demo.html)
+visit [main page](./demo.html)
 
 ---
 
