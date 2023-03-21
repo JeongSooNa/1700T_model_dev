@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1700T</title>
+    <link rel="stylesheet" href="demo_board.css" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./img/apple-icon-180x180.png">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  </head>
+  <body>
+    <div class="container">
+      <!-- logo -->
+      <a href="./demo.html">
+        <img
+          id="logo"
+          src="https://www.syntekabio.com/asset/images/all/main_logo_white_eng.png"
+          alt=""
+        />
+      </a>
+      <div class="loading">
+        <span>L</span>
+        <span>o</span>
+        <span>a</span>
+        <span>d</span>
+        <span>i</span>
+        <span>n</span>
+        <span>g</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        <span>.</span>
+        <p>Creating 1700T Database. Please wait a moment.</p>
+      </div>
+      <div class="col main">
+        <div class="row search-bar">
+          <input type="text" placeholder="Please Enter Uniprot ID" />
+          <button id="search-btn">search</button>
+        </div>
+        <div class="row data-wrapper">
+          <div class="col option-wrapper">
+            <h1>OPTION</h1>
+            <div class="option">
+              <p>Family</p>
+              <div class="row box-wrapper">
+                <h5>K</h5>
+                <h5>i</h5>
+                <h5>n</h5>
+                <h5>a</h5>
+                <h5>s</h5>
+                <h5>e</h5>
+                <input id="FamilyKinase" type="checkbox" />
+              </div>
+              <div class="row box-wrapper">
+                <h5>P</h5>
+                <h5>e</h5>
+                <h5>p</h5>
+                <h5>t</h5>
+                <h5>i</h5>
+                <h5>d</h5>
+                <h5>a</h5>
+                <h5>s</h5>
+                <h5>e</h5>
+                <input id="FamilyPeptidase" type="checkbox" />
+              </div>
+              <div class="row box-wrapper">
+                <h5>O</h5>
+                <h5>t</h5>
+                <h5>h</h5>
+                <h5>e</h5>
+                <h5>r</h5>
+                <h5>s</h5>
+                <input id="FamilyOthers" type="checkbox" />
+              </div>
+            </div>
+            <div class="option">
+              <p>Function Mode</p>
+              <div class="row box-wrapper">
+                <h5>A</h5>
+                <h5>g</h5>
+                <h5>o</h5>
+                <h5>n</h5>
+                <h5>i</h5>
+                <h5>s</h5>
+                <h5>t</h5>
+                <input id="FunctionAgonist" type="checkbox" />
+              </div>
+              <div class="row box-wrapper">
+                <h5>A</h5>
+                <h5>n</h5>
+                <h5>t</h5>
+                <h5>a</h5>
+                <h5>g</h5>
+                <h5>o</h5>
+                <h5>n</h5>
+                <h5>i</h5>
+                <h5>s</h5>
+                <h5>t</h5>
+                <input id="FunctionAntagonist" type="checkbox" />
+              </div>
+              <div class="row box-wrapper">
+                <h5>O</h5>
+                <h5>t</h5>
+                <h5>h</h5>
+                <h5>e</h5>
+                <h5>r</h5>
+                <h5>s</h5>
+                <input id="FunctionOthers" type="checkbox" />
+              </div>
+            </div>
+          </div>
+          <div class="row hide">
+            <h5 id="hide">◀ close</h5>
+          </div>
+          <div class="col main-wrapper">
+            <div class="col table-wrapper">
+              <div class="table-header">
+                <table>
+                  <thead>
+                    <tr>
+                      <!-- UniProtID,ProteinName,Type,Cluster,ModelPDB,LIG,STBClass,ModelActionMode -->
+                      <th>ID</th>
+                      <th>Uniprot ID</th>
+                      <th>Protein Name</th>
+                      <th>Type</th>
+                      <th>Model PDB</th>
+                      <th>LIG</th>
+                      <th>STB Class</th>
+                      <th>ModelActionMode</th>
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+              <div class="table-body">
+                <table id="data">
+                  <tbody id="data-tbody">
+                    <!-- data -->
+                  </tbody>
+                </table>
+              </div>
+              <!-- <div class="row pagination">
+                <a href="">Previous</a>
+                <a href="">1</a>
+                <a href="">2</a>
+                <a href="">3</a>
+                <a href="">4</a>
+                <a href="">5</a>
+                <a href="">Next</a>
+            </div> -->
+            </div>
+            <div class="bottom">
+              <p>
+                For Web after 1700T model validation project This web was
+                created to effectively use 1700T model data. <br />
+                Made for in-house use. It is a demo version before database
+                construction, so sufficient correction and feedback are
+                required. <br />
+                If necessary, we can request the co-work from the AI center team
+                after completing the demo version.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="circle-generator">
+        <!-- <div class="circle"></div> -->
+      </div>
+      <!-- popup -->
+      <div class="col data-popup">
+        <div class="popup-loading">
+          <span>.</span>
+          <span>.</span>
+          <span>.</span>
+        </div>
+        <div class="row popup-header">
+          <div class="popup-title"></div>
+          <div class="popup-close">
+            <!-- <img src="../IMG/exit.png" alt=""> -->
+            <img src="./img/exit_grey.png" alt="" />
+          </div>
+        </div>
+        <div class="popup-body">
+          <!-- 
+            UniProtID
+            ProteinName
+            Type
+            Cluster
+            ModelPDB
+            LIG
+            STBClass
+            ModelActionMode
+            AllostericOrthostericETC
+            Family
+            Subfamily
+            Class
+            RelatedDisease
+            internalProject
+           -->
+          <div class="row popup-item uniprot-id">
+            <span>Uniprot ID</span>
+            <input id="popUniProtID" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>Protein Name</span>
+            <input id="popProteinName" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>ModelPDB</span>
+            <input id="popModelPDB" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>LIG</span>
+            <input id="popLIG" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>STB Class</span>
+            <input id="popSTBClass" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>Model Action Mode</span>
+            <input id="popModelActionMode" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>Cluster</span>
+            <input id="popCluster" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>Allosteric/Orthosteric/ETC</span>
+            <input id="popAl" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>Family</span>
+            <input id="popFamily" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>Subfamily</span>
+            <input id="popSubFamily" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>Class</span>
+            <input id="popClass" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>Related Disease</span>
+            <input id="popRe" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>internalProject</span>
+            <input id="popIn" type="text" value="" readonly />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- wave script -->
+  <script>
+    // let ctx;
+
+    // function buildChannel(element) {
+    //   const source = ctx.createMediaElementSource(element);
+    //   const gain = ctx.createGain();
+    //   const pan = ctx.createStereoPanner();
+    //   return function connectChannel(merger) {
+    //     source
+    //       .connect(gain)
+    //       .connect(pan)
+    //       .connect(merger)
+    //       .connect(ctx.destination);
+    //     return {
+    //       isPlaying: () => element.playing,
+    //       play: () => {
+    //         if (element.playing) return;
+    //         element.play();
+    //       },
+    //       gain: (value) => (gain.gain.value = value),
+    //       pan: (value) => (pan.pan.value = value),
+    //     };
+    //   };
+    // }
+
+    // function randomRunner() {
+    //   const audioElements = document.querySelectorAll("audio");
+    //   const mixer = ctx.createChannelMerger(audioElements.length);
+    //   const channels = Array.from(audioElements).map((audioElement) => {
+    //     return buildChannel(audioElement)(mixer);
+    //   });
+    //   return function player() {
+    //     const control = channels[(Math.random() * channels.length) | 0];
+    //     if (control.isPlaying()) return player();
+    //     control.gain(0.5 * Math.random() + 0.1);
+    //     control.pan(2 * Math.random() - 1);
+    //     control.play();
+    //   };
+    // }
+
+    // let runner;
+    // const player = document.querySelector("button.player");
+    // player &&
+    //   player.addEventListener("click", (e) => {
+    //     if (e.target.dataset.state === "stop") {
+    //       e.target.dataset.state = "play";
+    //       if (!ctx) {
+    //         ctx = new AudioContext();
+    //       }
+    //       if (!runner) {
+    //         runner = randomRunner();
+    //       }
+    //       ctx.resume();
+    //       return;
+    //     }
+    //     e.target.dataset.state = "stop";
+    //     ctx.suspend();
+    //   });
+
+    // let mouseX;
+    // let mouseY;
+
+    // let width;
+    // let height;
+    // width = window.innerWidth;
+    // height = window.innerHeight;
+
+    // mouseX = 0;
+    // mouseY = height / 2;
+
+    // window.addEventListener("resize", () => {
+    //   width = window.innerWidth;
+    //   height = window.innerHeight;
+    // });
+
+    // window.addEventListener("mousemove", (e) => {
+    //   mouseX = e.x;
+    //   mouseY = e.y;
+    // });
+
+    // function buildAnimator(...fns) {
+    //   let frame = 0;
+    //   return function update(frameLimit = 1) {
+    //     if (frame % frameLimit == 0) {
+    //       fns.forEach((fn) => {
+    //         fn(frame);
+    //       });
+    //     }
+    //     frame = requestAnimationFrame(() => update(frameLimit));
+    //     return function cancel() {
+    //       cancelAnimationFrame(frame);
+    //     };
+    //   };
+    // }
+    // const circle = document.querySelector(".circle");
+    // const circleContainer = document.querySelector(".circle-generator");
+
+    // function generateId() {
+    //   return Math.random().toString(16).slice(1).slice(-8);
+    // }
+    // function buildCircleGenerator(container) {
+    //   const circles = [];
+    //   const createCircle = () => {
+    //     const circle = document.createElement("div");
+    //     circle.classList.add("circle");
+    //     circle.setAttribute("data-id", generateId());
+    //     container.appendChild(circle);
+    //     return circle;
+    //   };
+    //   function addCircle(elementBuilderFn) {
+    //     const el = createCircle();
+    //     const fn = elementBuilderFn(el);
+    //     circles.push({ el, fn });
+    //     return circles;
+    //   }
+    //   function getCircles() {
+    //     return circles;
+    //   }
+    //   function removeCircle(index) {
+    //     circles.splice(index, 1);
+    //   }
+    //   return {
+    //     addCircle,
+    //     getCircles,
+    //     removeCircle,
+    //   };
+    // }
+
+    // function generateInitialConditions() {
+    //   return {
+    //     radius: (t) => t * 500,
+    //     delta: (t) => 100 * t * t + 10,
+    //     transfer: (t) => 0.5 * (1 / (20 * t * t + 1)),
+    //     frequency: 5 * Math.random() + 0.5,
+    //   };
+    // }
+
+    // function buildWaveFront(
+    //   element,
+    //   initialConditions = {
+    //     radius: (t) => t * 500,
+    //     delta: (t) => 150 * t * t + 10,
+    //     transfer: (t) => 1 / (0.1 * t * t + 1000),
+    //     frequency: 1,
+    //   }
+    // ) {
+    //   const speed = (t) => t / 1000;
+    //   const { radius, delta, transfer, frequency } = initialConditions;
+    //   let initialFrame;
+    //   let x;
+    //   let y;
+    //   return function waveFront(t) {
+    //     if (!initialFrame) {
+    //       initialFrame = t;
+    //       x = mouseX + (150 * Math.random() - 75);
+    //       y = mouseY + (150 * Math.random() - 75);
+    //     }
+    //     const [rad, del, trans, freq] = [
+    //       radius(speed(t - initialFrame)),
+    //       delta(speed(t - initialFrame)),
+    //       transfer(speed(t - initialFrame)),
+    //       frequency,
+    //     ];
+    //     if (trans > 0.1) {
+    //       element.style = `--wavefront-radius:${
+    //         (rad / 2) * freq
+    //       }%; --wavefront-delta: ${
+    //         del / (freq + 0.5)
+    //       }%; --wavefront-intensity: ${
+    //         trans / ((freq * freq + 0.5) / freq)
+    //       }; --wavefront-x-pos: ${x}px; --wavefront-y-pos: ${y}px`;
+    //       return true;
+    //     }
+    //     return false;
+    //   };
+    // }
+
+    // function buildCreateWaves(containerElement) {
+    //   const generator = buildCircleGenerator(containerElement);
+    //   const CHANCE = 0.1;
+    //   const WAVES_LIMIT = 5;
+    //   return function waves(t) {
+    //     const random = Math.random();
+    //     if (random <= CHANCE) {
+    //       generator.getCircles().length <= WAVES_LIMIT &&
+    //         generator.addCircle((el) =>
+    //           buildWaveFront(el, generateInitialConditions())
+    //         ) &&
+    //         Math.random() <= 0.75 &&
+    //         runner &&
+    //         runner();
+    //     }
+    //     if (generator.getCircles().length === 0) return;
+    //     generator.getCircles().forEach((cir, index) => {
+    //       if (!cir.fn) return;
+    //       const res = cir.fn(t, t);
+    //       if (!res) {
+    //         containerElement.removeChild(cir.el);
+    //         generator.removeCircle(index);
+    //       }
+    //     });
+    //   };
+    // }
+
+    // const background = document.body;
+    // const cycleBackground = (t) => {
+    //   document.body.style = `--g1-angle: ${
+    //     33 * Math.sin(t / 500) - 15
+    //   }deg; --g2-angle: ${-67 * Math.cos(-t / 245) + 30}deg`;
+    // };
+
+    // const updater = buildAnimator(
+    //   buildCreateWaves(circleContainer),
+    //   cycleBackground
+    // );
+    // const cancel = updater();
+  </script>
+  <!-- JQuery -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <!-- move popup -->
+  <script
+    type="text/javascript"
+    src="http://code.jquery.com/ui/1.10.1/jquery-ui.js"
+  ></script>
+  <!-- script -->
+  <script>
+    // move popup
+    $(function () {
+      $(".data-popup").draggable();
+    });
+    // loading function
+    setTimeout(function () {
+      $(".main").css("display", "block");
+      $(".loading").css("display", "none");
+      // }, 20000);
+    }, 1000);
+
+    // set table function
+    // $("#data tbody").append(
+    //   "<tr>" +
+    //     "<td>P43403</td>" +
+    //     "<td>ZAP70</td>" +
+    //     "<td>wild</td>" +
+    //     "<td>CEREP</td>" +
+    //     "<td>Kinase</td>" +
+    //     "<td>TK</td>" +
+    //     "<td>Protein Tyrosine</td>" +
+    //     "<td>Biochemical Enzymatic</td>" +
+    //     "<td>Antagonist</td>" +
+    //     "</tr>" +
+    //     "<tr>" +
+    //     "<td>P43405</td>" +
+    //     "<td>KSYK</td>" +
+    //     "<td>wild</td>" +
+    //     "<td>CEREP</td>" +
+    //     "<td>Kinase</td>" +
+    //     "<td>TK</td>" +
+    //     "<td>Protein Tyrosine</td>" +
+    //     "<td>Biochemical Enzymatic</td>" +
+    //     "<td>Antagonist</td>" +
+    //     "</tr>" +
+    //     "<tr>" +
+    //     "<td>P45983</td>" +
+    //     "<td>MK08</td>" +
+    //     "<td>wild</td>" +
+    //     "<td>CEREP</td>" +
+    //     "<td>Kinase</td>" +
+    //     "<td>CMGC</td>" +
+    //     "<td>Protein Ser/thr</td>" +
+    //     "<td>Biochemical Enzymatic</td>" +
+    //     "<td>Antagonist</td>" +
+    //     "</tr>" +
+    //     "<tr>" +
+    //     "<td>P45984</td>" +
+    //     "<td>MK09</td>" +
+    //     "<td>wild</td>" +
+    //     "<td>CEREP</td>" +
+    //     "<td>Kinase</td>" +
+    //     "<td>CMGC</td>" +
+    //     "<td>Protein Ser/thr</td>" +
+    //     "<td>Biochemical Enzymatic</td>" +
+    //     "<td>Antagonist</td>" +
+    //     "</tr>" +
+    //     "<tr>" +
+    //     "<td>P45985</td>" +
+    //     "<td>MAP2K4</td>" +
+    //     "<td>wild</td>" +
+    //     "<td>CEREP</td>" +
+    //     "<td>Kinase</td>" +
+    //     "<td>STE</td>" +
+    //     "<td>Protein Ser/thr</td>" +
+    //     "<td>Biochemical Enzymatic</td>" +
+    //     " <td>Antagonist</td>" +
+    //     "</tr>"
+    // );
+    // for (var i = 0; i < 100; i++) {
+    //   var html = "";
+    //   html +=
+    //     "<tr>" +
+    //     "<td></td>" +
+    //     "<td></td>" +
+    //     "<td></td>" +
+    //     "<td></td>" +
+    //     "<td>-</td>" +
+    //     "<td></td>" +
+    //     "<td></td>" +
+    //     "<td></td>" +
+    //     "<td></td>" +
+    //     "</tr>";
+    //   $("#data tbody").append(html);
+    // }
+
+    // hide option
+    $("#hide").click(function () {
+      if ($("#hide").text() == "▶  open") {
+        $(".option-wrapper").css("display", "block");
+        $(".main-wrapper").css("width", "80%");
+        $("#hide").text("◀  close");
+      } else {
+        $(".option-wrapper").css("display", "none");
+        $(".main-wrapper").css("width", "95%");
+        $("#hide").text("▶  open");
+      }
+    });
+
+    // popup
+    $(".popup-close").click(function () {
+      $(".data-popup").css("display", "none");
+      $(".popup-body").css("display", "none");
+    });
+
+    // popup-body 의 input value를 위한 script
+    // var popup_input_len = $(".popup-body").find("input").length
+    // for(var i=0;i < popup_input_len;i++){
+    //   var len = $(".popup-body").find("input")[i].value.length
+    //   console.log(len)
+    //   console.log($(".popup-body").children("input:eq("+i+")"))
+    // }
+
+    // Option checkbox
+    $("#FamilyKinase").click(function () {
+      if ($("#FamilyKinase").is(":checked")) {
+        $("#FamilyPeptidase").prop("checked", false);
+        $("#FamilyOthers").prop("checked", false);
+      }
+    });
+    $("#FamilyPeptidase").click(function () {
+      if ($("#FamilyPeptidase").is(":checked")) {
+        $("#FamilyKinase").prop("checked", false);
+        $("#FamilyOthers").prop("checked", false);
+      }
+    });
+    $("#FamilyOthers").click(function () {
+      if ($("#FamilyOthers").is(":checked")) {
+        $("#FamilyKinase").prop("checked", false);
+        $("#FamilyPeptidase").prop("checked", false);
+      }
+    });
+    $("#FunctionAgonist").click(function () {
+      if ($("#FunctionAgonist").is(":checked")) {
+        $("#FunctionAntagonist").prop("checked", false);
+        $("#FunctionOthers").prop("checked", false);
+      }
+    });
+    $("#FunctionAntagonist").click(function () {
+      if ($("#FunctionAntagonist").is(":checked")) {
+        $("#FunctionAgonist").prop("checked", false);
+        $("#FunctionOthers").prop("checked", false);
+      }
+    });
+    $("#FunctionOthers").click(function () {
+      if ($("#FunctionOthers").is(":checked")) {
+        $("#FunctionAgonist").prop("checked", false);
+        $("#FunctionAntagonist").prop("checked", false);
+      }
+    });
+    // Family
+  </script>
+  <!-- Database script -->
+  <script>
+    /**************************************************/
+    /*                  Database Load                 */
+    /**************************************************/
+    // Read csv file
+    $.ajax({
+      // url: "./demo_v0.csv",
+      url: "https://raw.githubusercontent.com/JeongSooNa/1700T_model_dev/demo_v0.csv",
+      dataType: "text",
+    }).done(successFunction);
+    // Column
+    /*
+        0. Gene(1700T)
+        1. PDB
+        2. UniProtID *
+        3. tempFlag
+        4. ProteinName *
+        5. Type *
+        6. Cluster *
+        7. ModelPDB *
+        8. LIG *
+        9. Lig Suggested
+        10. PDB
+        11. STB-Cloud Class
+        12. inPBList
+        13. Replaced
+        14. STB-Class *
+        15. manager
+        16. first1700
+        17. Title
+        18. ModelActionMode *
+        19. AllostericOrthostericETC *
+        20. isAssay
+        21. CRO
+        22. CRO target
+        23. UniProt
+        24. Family *
+        25. Subfamily *
+        26. Class *
+        27. Assay type
+        28. Assay subtype
+        29. Function Mode
+        30. Detection method
+        31. Assay Possibility
+        32. Related Disease *
+        33. internal project *
+
+        */
+
+    function successFunction(data) {
+      // raw data(csv file)의 \n를 삭제해야 formating에 용이.
+      var colList = data.split("\n");
+      var len = colList.length;
+      var str_col = colList[0];
+      var column = colList[0].split(",");
+      console.log(len);
+      // console.log(column);
+      // console.log(colList[1].split(","));
+      // logic
+      if (!window.openDatabase) {
+        alert("이 브라우저는 Web SQL Database를 지원하지 않습니다.");
+      } else {
+      }
+      var db;
+      // Create Database
+      db = window.openDatabase(
+        "Syntekabio",
+        "1.0",
+        "Syntekabio",
+        20 * 2048 * 2048
+      );
+
+      /*
+          [2]UniProtID *
+          [4]ProteinName *
+          [5]Type *
+          [6]Cluster *
+          [7]ModelPDB *
+          [8]LIG *
+          [14]STB-Class *
+          [18]ModelActionMode *
+          [19]AllostericOrthostericETC *
+          [24]Family *
+          [25]Subfamily *
+          [26]Class *
+          [32]Related Disease *
+          [33]internal project *
+    */
+
+      // Create Table
+      function createTable_1() {
+        db.transaction(function (tx) {
+          tx.executeSql(
+            "CREATE TABLE DB1700_1(id,UniProtID,ProteinName,Type,ModelPDB,LIG,STBClass,ModelActionMode)"
+          );
+          // UniProtID,ProteinName,Type,Cluster,ModelPDB,LIG,STBClass,ModelActionMode
+          // Assay_type,Assay_subtype,Function_Mode,Detection_method,Assay_Possibility
+        });
+      }
+      function createTable_2() {
+        db.transaction(function (tx) {
+          tx.executeSql(
+            "CREATE TABLE DB1700_2(id,Cluster,AllostericOrthostericETC,Family,Subfamily,Class,RelatedDisease,internalProject)"
+          );
+        });
+      }
+
+      function createTable_3() {
+        db.transaction(function (tx) {
+          tx.executeSql(
+            "CREATE TABLE DB1700_3(id,search)"
+          );
+        });
+      }
+      // function createTable_header() {
+      //   // For HTML table header
+      //   db.transaction(function (tx) {
+      //     tx.executeSql(
+      //       "CREATE TABLE DB1700_header(UniProtID,ProteinName,Type,CRO,Family,Subfamily,Class,AssayType)"
+      //     );
+      //   });
+      // }
+      // Drop Table
+      function dropTable_1() {
+        db.transaction(function (tx) {
+          tx.executeSql("DROP TABLE DB1700_1");
+        });
+      }
+      function dropTable_2() {
+        db.transaction(function (tx) {
+          tx.executeSql("DROP TABLE DB1700_2");
+        });
+      }
+      function dropTable_3() {
+        db.transaction(function (tx) {
+          tx.executeSql("DROP TABLE DB1700_3");
+        });
+      }
+      function dropTable_header() {
+        db.transaction(function (tx) {
+          tx.executeSql("DROP TABLE DB1700_header");
+        });
+      }
+      // Delete all
+      function deleteAllData_1() {
+        db.transaction(function (tx) {
+          tx.executeSql("DELETE FROM DB1700_1");
+        });
+      }
+      function deleteAllData_2() {
+        db.transaction(function (tx) {
+          tx.executeSql("DELETE FROM DB1700_2");
+        });
+      }
+      function deleteAllData_3() {
+        db.transaction(function (tx) {
+          tx.executeSql("DELETE FROM DB1700_3");
+        });
+      }
+      // function deleteAllData_header() {
+      //   db.transaction(function (tx) {
+      //     tx.executeSql("DELETE FROM DB1700_header");
+      //   });
+      // }
+
+      function insertData_1(index) {
+        db.transaction(function (tx) {
+          tx.executeSql(
+            "INSERT INTO DB1700_1 VALUES(?,?,?,?,?,?,?,?)",
+            [
+              // id,UniProtID,ProteinName,Type,ModelPDB,LIG,STBClass,ModelActionMode
+              index,
+              colList[index].split(",")[2],
+              colList[index].split(",")[4],
+              colList[index].split(",")[5],
+              colList[index].split(",")[7],
+              colList[index].split(",")[8],
+              colList[index].split(",")[14],
+              colList[index].split(",")[18],
+            ],
+            function (tx, result) {
+              // console.log("Query Success");
+            },
+            function (tx, error) {
+              console.log("Query Error : " + error.massage);
+            }
+          );
+        });
+      }
+      function insertData_2(index) {
+        db.transaction(function (tx) {
+          tx.executeSql(
+            "INSERT INTO DB1700_2 VALUES(?,?,?,?,?,?,?,?)",
+            [
+              // id,Cluster,AllostericOrthostericETC,Family,Subfamily,Class,RelatedDisease,internalProject
+              index,
+              colList[index].split(",")[6],
+              colList[index].split(",")[19],
+              colList[index].split(",")[24],
+              colList[index].split(",")[25],
+              colList[index].split(",")[26],
+              colList[index].split(",")[32],
+              colList[index].split(",")[33],
+            ],
+            function (tx, result) {
+              // console.log("Query Success");
+            },
+            function (tx, error) {
+              console.log("Query Error : " + error.massage);
+            }
+          );
+        });
+      }
+
+      //search data
+      function insertData_3(index) {
+        db.transaction(function (tx) {
+          tx.executeSql(
+            "INSERT INTO DB1700_3 VALUES(?,?,?,?,?,?,?,?)",
+            [index, colList[index].split(",")[34]],
+            function (tx, result) {
+              // console.log("Query Success");
+            },
+            function (tx, error) {
+              console.log("Query Error : " + error.massage);
+            }
+          );
+        });
+      }
+      // data table header ()
+      // function insertData_header(index) {
+      //   db.transaction(function (tx) {
+      //     tx.executeSql(
+      //       "INSERT INTO DB1700_header VALUES(?,?,?,?,?,?,?,?)",
+      //       [
+      //         colList[index].split(",")[2],
+      //         colList[index].split(",")[3],
+      //         colList[index].split(",")[4],
+      //         colList[index].split(",")[19],
+      //         colList[index].split(",")[22],
+      //         colList[index].split(",")[23],
+      //         colList[index].split(",")[24],
+      //         colList[index].split(",")[25],
+      //       ],
+      //       function (tx, result) {
+      //         // console.log("Query Success");
+      //       },
+      //       function (tx, error) {
+      //         console.log("Query Error : " + error.massage);
+      //       }
+      //     );
+      //   });
+      // }
+      // run
+      deleteAllData_1();
+      deleteAllData_2();
+      deleteAllData_3();
+      // deleteAllData_header();
+      createTable_1();
+      createTable_2();
+      createTable_3();
+      // createTable_header();
+
+      // for (var i = 1; i < 100; i++) {
+      for (var i = 1; i < 3520; i++) {
+        insertData_1(i);
+        insertData_2(i);
+        insertData_3(i);
+        // insertData_header(i);
+      }
+      // table이 update 되지 않을 때 drop 후 재생성 로직 필요.
+      // dropTable_1();
+      // dropTable_2();
+      // dropTable_3();
+      // dropTable_header();
+
+      // SELECT Query
+      function functionName() {
+        var result = [];
+        db.transaction(function (tx) {
+          tx.executeSql("SELECT * FROM DB1700_1", [], function (tx, rs) {
+            for (var i = 0; i < rs.rows.length; i++) {
+              var row = rs.rows.item(i);
+              result[i] = {
+                Gene1700T: row["Gene1700T"],
+                PDB: row["PDB"],
+              };
+            }
+            // console.log(result);
+            // Do append in this function
+          });
+        });
+        return result;
+      }
+      functionName();
+      //SELECT all Gene1700T
+      function selectGene1700T() {
+        var result = [];
+        db.transaction(function (tx) {
+          tx.executeSql(
+            "SELECT Gene1700T FROM DB1700_1",
+            [],
+            function (tx, rs) {
+              for (var i = 0; i < rs.rows.length; i++) {
+                var row = rs.rows.item(i);
+                result[i] = {
+                  Gene1700T: row["Gene1700T"],
+                };
+              }
+              // console.log(result);
+              // Do append in this function
+            }
+          );
+        });
+        return result;
+      }
+      selectGene1700T();
+
+      /*************** Search Bar ***************/
+      //
+      function mainTable() {
+        var result = [];
+        db.transaction(function (tx) {
+          // UniProtID,ProteinName,Type,Cluster,ModelPDB,LIG,STBClass,ModelActionMode
+          tx.executeSql("SELECT * FROM DB1700_1", [], function (tx, rs) {
+            for (var i = 0; i < rs.rows.length; i++) {
+              var row = rs.rows.item(i);
+              result[i] = {
+                id: row["id"],
+                UniProtID: row["UniProtID"],
+                ProteinName: row["ProteinName"],
+                Type: row["Type"],
+                ModelPDB: row["ModelPDB"],
+                LIG: row["LIG"],
+                STBClass: row["STBClass"],
+                ModelActionMode: row["ModelActionMode"],
+              };
+            }
+
+            // Do append in this function
+            for (var i = 0; i < result.length; i++) {
+              var html = "";
+              html +=
+                "<tr id='data-tr'><td id='data-td'>" +
+                result[i].id +
+                "</td><td id='data-td'>" +
+                result[i].UniProtID +
+                "</td><td id='data-td'>" +
+                result[i].ProteinName +
+                "</td><td id='data-td'>" +
+                result[i].Type +
+                "</td><td id='data-td'>" +
+                result[i].ModelPDB +
+                "</td><td id='data-td'>" +
+                result[i].LIG +
+                "</td><td id='data-td'>" +
+                result[i].STBClass +
+                "</td><td id='data-td'>" +
+                result[i].ModelActionMode +
+                "</td id='data-td'></tr>";
+              /*
+                    Option
+                    add Flag
+                    Search Bar & Option
+                  */
+
+              // Search Bar input (Uniprot ID)
+              var ser = $(".search-bar input").val();
+              if (ser != "") {
+                if (!result[i].UniProtID.includes(ser)) {
+                  continue;
+                }
+              }
+
+              // Include Family Kinase
+              if ($("#FamilyKinase").is(":checked")) {
+                if (!result[i].STBClass.includes("Kinase")) {
+                  continue;
+                }
+              }
+              // Include Family Peptidase
+              if ($("#FamilyPeptidase").is(":checked")) {
+                if (!result[i].STBClass.includes("Peptidase")) {
+                  continue;
+                }
+              }
+              // Include Family Others
+              if ($("#FamilyOthers").is(":checked")) {
+                if (result[i].STBClass.includes("Kinase")) {
+                  continue;
+                }
+                if (result[i].STBClass.includes("Peptidase")) {
+                  continue;
+                }
+              }
+              // Include Function Agonist
+              if ($("#FunctionAgonist").is(":checked")) {
+                if (!result[i].ModelActionMode.includes("ctivator")) {
+                  continue;
+                }
+              }
+              // Include Function Antagonist
+              if ($("#FunctionAntagonist").is(":checked")) {
+                if (!result[i].ModelActionMode.includes("nhibitor")) {
+                  continue;
+                }
+              }
+              // Include Function Others
+              if ($("#FunctionOthers").is(":checked")) {
+                if (result[i].ModelActionMode.includes("ctivator")) {
+                  continue;
+                }
+                if (result[i].ModelActionMode.includes("nhibitor")) {
+                  continue;
+                }
+              }
+
+              // append
+              $("#data tbody").append(html);
+            }
+          });
+        });
+        return result;
+      }
+      mainTable();
+
+      // reload and append table
+      $("#search-btn").click(function () {
+        $("#data-tbody *").remove();
+        mainTable();
+      });
+
+      // data click event
+      $(document).on("click", "tr", function () {
+        // Get Uniprot ID
+        var text = $(this).text().slice(0, 4);
+        var index = "";
+        var pattern_n = /[0-9]/; // number regulation
+        for (var i = 0; i < 4; i++) {
+          if (pattern_n.test(text[i])) {
+            index = index + text[i];
+          } else {
+            break;
+          }
+        }
+        // console.log(index);
+        var index_n = Number(index);
+        // console.log(index_n);
+
+        $(".data-popup").css("display", "block");
+        $(".popup-loading").css("display", "block");
+        setTimeout(function () {
+          $(".popup-body").css("display", "block");
+          $(".popup-loading").css("display", "none");
+        }, 3000);
+
+        // DB1700_1(id,UniProtID,ProteinName,Type,Cluster,ModelPDB,LIG,STBClass)
+        var result_1 = [];
+        var result_2 = [];
+        // var result_3 = [];
+        db.transaction(function (tx) {
+          tx.executeSql("SELECT * FROM DB1700_1", [], function (tx, rs) {
+            for (var i = 0; i < rs.rows.length; i++) {
+              var row = rs.rows.item(i);
+              result_1[i] = {
+                id: row["id"],
+                UniProtID: row["UniProtID"],
+                ProteinName: row["ProteinName"],
+                Type: row["Type"],
+                ModelPDB: row["ModelPDB"],
+                LIG: row["LIG"],
+                STBClass: row["STBClass"],
+                ModelActionMode: row["ModelActionMode"],
+              };
+            }
+            // Do append in this function
+            $("#popUniProtID").val(result_1[index_n - 1].UniProtID);
+            $("#popProteinName").val(result_1[index_n - 1].ProteinName);
+            $("#popModelPDB").val(result_1[index_n - 1].ModelPDB);
+            $("#popLIG").val(result_1[index_n - 1].LIG);
+            $("#popSTBClass").val(result_1[index_n - 1].STBClass);
+            $("#popModelActionMode").val(result_1[index_n - 1].ModelActionMode);
+          });
+        });
+
+        // DB1700_2(id,ModelActionMode,AllostericOrthostericETC,Family,Subfamily,Class,RelatedDisease,internalProject)
+        db.transaction(function (tx) {
+          tx.executeSql("SELECT * FROM DB1700_2", [], function (tx, rs) {
+            for (var i = 0; i < rs.rows.length; i++) {
+              var row = rs.rows.item(i);
+              result_2[i] = {
+                id: row["id"],
+                Cluster: row["Cluster"],
+                AllostericOrthostericETC: row["AllostericOrthostericETC"],
+                Family: row["Family"],
+                Subfamily: row["Subfamily"],
+                Class: row["Class"],
+                RelatedDisease: row["RelatedDisease"],
+                internalProject: row["internalProject"],
+              };
+            }
+            // Do append in this function
+            $("#popCluster").val(result_2[index_n - 1].Cluster);
+            $("#popAl").val(result_2[index_n - 1].AllostericOrthostericETC);
+            $("#popFamily").val(result_2[index_n - 1].Family);
+            $("#popSubFamily").val(result_2[index_n - 1].Subfamily);
+            $("#popClass").val(result_2[index_n - 1].Class);
+            $("#popRe").val(result_2[index_n - 1].RelatedDisease);
+            $("#popIn").val(result_2[index_n - 1].internalProject);
+          });
+        });
+        // // DB1700_3(ModelActionMode,AllostericOrthosteric,isAssay,CRO,CROTarget,UniProt,Family,Subfamily)
+        // db.transaction(function (tx) {
+        //   tx.executeSql("SELECT * FROM DB1700_3", [], function (tx, rs) {
+        //     for (var i = 0; i < rs.rows.length; i++) {
+        //       var row = rs.rows.item(i);
+        //       result_3[i] = {
+        //         ModelActionMode: row["ModelActionMode"],
+        //         AllostericOrthosteric: row["AllostericOrthosteric"],
+        //         isAssay: row["isAssay"],
+        //         CRO: row["CRO"],
+        //         CROTarget: row["CROTarget"],
+        //         UniProt: row["UniProt"],
+        //         Family: row["Family"],
+        //         Subfamily: row["Subfamily"],
+        //       };
+        //     }
+        //     // Do append in this function
+        //   });
+        // });
+
+        // Change popup data
+      });
+    }
+  </script>
+
+  <script></script>
+</html>
