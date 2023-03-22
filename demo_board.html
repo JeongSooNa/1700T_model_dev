@@ -13,8 +13,11 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./img/apple-icon-180x180.png">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="shortcut icon" href="./img/apple-icon-180x180.png" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
   </head>
   <body>
     <div class="container">
@@ -205,6 +208,13 @@
             RelatedDisease
             internalProject
            -->
+           <h1>Model Information</h1>
+          <div class="row download">
+            <a id="goRCSB" href="" target="_blank"
+              ><img src="img/rcsb_logo.png" alt=""
+            /></a>
+            <a id="getPDB" href="" download="" target="_blank">download PDB</a>
+          </div>
           <div class="row popup-item uniprot-id">
             <span>Uniprot ID</span>
             <input id="popUniProtID" type="text" value="" readonly />
@@ -754,9 +764,7 @@
 
       function createTable_3() {
         db.transaction(function (tx) {
-          tx.executeSql(
-            "CREATE TABLE DB1700_3(id,search)"
-          );
+          tx.executeSql("CREATE TABLE DB1700_3(id,search)");
         });
       }
       // function createTable_header() {
@@ -908,8 +916,8 @@
       createTable_3();
       // createTable_header();
 
-      // for (var i = 1; i < 100; i++) {
-      for (var i = 1; i < 3520; i++) {
+      for (var i = 1; i < 100; i++) {
+        // for (var i = 1; i < 3520; i++) {
         insertData_1(i);
         insertData_2(i);
         insertData_3(i);
@@ -1121,12 +1129,15 @@
               };
             }
             // Do append in this function
+            $("#goRCSB").attr("href","https://www.uniprot.org/uniprotkb/"+ result_1[index_n - 1].UniProtID +"/entry")
             $("#popUniProtID").val(result_1[index_n - 1].UniProtID);
             $("#popProteinName").val(result_1[index_n - 1].ProteinName);
             $("#popModelPDB").val(result_1[index_n - 1].ModelPDB);
             $("#popLIG").val(result_1[index_n - 1].LIG);
             $("#popSTBClass").val(result_1[index_n - 1].STBClass);
             $("#popModelActionMode").val(result_1[index_n - 1].ModelActionMode);
+            $("#getPDB").attr("href","https://files.rcsb.org/download/" + result_1[index_n - 1].ModelPDB.substr(0,4) + ".pdb")
+            // $("#getPDB").attr("download",result_1[index_n - 1].ModelPDB.substr(0,4) + ".pdb")
           });
         });
 
