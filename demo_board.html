@@ -213,6 +213,9 @@
             <a id="goRCSB" href="" target="_blank"
               ><img src="img/rcsb_logo.png" alt=""
             /></a>
+            <a id="goUniprot" href="" target="_blank"
+              ><img src="img/uniprot_logo.png" alt=""
+            /></a>
             <a id="getPDB" href="" download="" target="_blank">download PDB</a>
           </div>
           <div class="row popup-item uniprot-id">
@@ -1129,7 +1132,9 @@
               };
             }
             // Do append in this function
-            $("#goRCSB").attr("href","https://www.uniprot.org/uniprotkb/"+ result_1[index_n - 1].UniProtID +"/entry")
+            $("#goRCSB").attr("href","https://www.rcsb.org/structure/"+ result_1[index_n - 1].ModelPDB.substr(0,4) )
+            // console.log(result_1[index_n - 1].ModelPDB.substr(0,4))
+            $("#goUniprot").attr("href","https://www.uniprot.org/uniprotkb/"+ result_1[index_n - 1].UniProtID +"/entry")
             $("#popUniProtID").val(result_1[index_n - 1].UniProtID);
             $("#popProteinName").val(result_1[index_n - 1].ProteinName);
             $("#popModelPDB").val(result_1[index_n - 1].ModelPDB);

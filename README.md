@@ -9,13 +9,10 @@ If necessary, we can request the co-work from the AI center team after completin
 
 ## Overview
 > Main
-![jpg](IMG/page_main.png)
 
 > Database
-![jpg](IMG/page_table.png)
 
 > Popup
-![jpg](IMG/page_popup.png)
 
 ---
 
@@ -23,7 +20,7 @@ If necessary, we can request the co-work from the AI center team after completin
 <!-- download ZIP file in [GitHub](https://github.com/JeongSooNa/1700T_model_dev) -->
 <!-- ![jpg](IMG/1700T_readme.png) -->
 <!-- Unzip and open the demo.html file in the web_publishing folder. -->
-visit [main page](./demo.html)
+visit [main page](#)
 
 ---
 
