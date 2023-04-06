@@ -1,4 +1,4 @@
-# 1700T Model Development
+# Model of Deepmatcher
 ### For Web after 1700T model validation project
 This web was created to effectively use 1700T model data.  
 Made for in-house use.  

@@ -1,21 +1,33 @@
 ![jpg](https://www.syntekabio.com/asset/images/all/main_logo_eng.png)
-# **1700T model Web Development 기획서**
+# **Model of Deepmatcher Production Report**
 
 #### Team : AI Drug Development Operation Team
-#### PL : JiYoon Shin
-#### Planner : JeongSoo Na
-#### Date : 2023.02.01
+#### Project Manager : JiYoon Shin
+#### Project Developer : JeongSoo Na
+#### Date : 2023.04.06
 #### Estimated required date : 2023.02.01 ~ 2023.04.06
 
 ---
 
 ### **OBJECT**
 
-> 확보한 1700T model 구조 확인을 위한 Web Page 구현
+1. 확보한 1700T 모델 타겟 유무 확인을 위한 Web Page 구현
 
-> Deepmatcher 사용 전 데이터 및 유용한 타겟 확인
+2. Deepmatcher 사용 전 관심 타겟의 상세 정보 및 구조 파일, 실험 데이터 확인
 
-> 카테고리로 분류, 검색
+3. 다양한 옵션들로 카테고리 분류, 검색 기능을 통한 유연한 데이터 조회
+
+---
+
+### **Overview**
+
+- Main Page
+    - Main Banner 및 link 이동을 위한 Navigator
+
+- Database Page
+    - 검색 Bar & 검색 기준 설정
+    - Database table 표기
+    - 하단 Footer에 회사 정보 및 contect, reference 표기
 
 ---
 
@@ -31,14 +43,6 @@
 - Web page 구현을 위한 Springboot (MVC 패턴을 활용한 API 호출)
 - Database : MySQl 혹은 data가 많지 않을 시 서버에 업로드
 - Search 기능 우선 구현 후 frontend Backend 연결.
-
----
-
-### **Overview**
-- Main Banner 및 link 이동을 위한 Navigator
-- 검색 Bar & 검색 기준 설정
-- Database 표기
-- 하단 Footer에 회사 정보 및 contect, reference 표기
 
 ---
 

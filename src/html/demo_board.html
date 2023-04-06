@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1700T</title>
-    <link rel="stylesheet" href="demo_board.css" />
+    <link rel="stylesheet" href="../css/demo_board.css" />
     <!-- font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
       rel="stylesheet"
     />
-    <link rel="shortcut icon" href="./img/apple-icon-180x180.png" />
+    <link rel="shortcut icon" href="../../img/apple-icon-180x180.png" />
     <meta
       http-equiv="Content-Security-Policy"
       content="upgrade-insecure-requests"
@@ -126,7 +126,7 @@
                 <h5>i</h5>
                 <h5>l</h5>
                 <h5>d</h5>
-                <h5> </h5>
+                <h5></h5>
                 <h5>t</h5>
                 <h5>y</h5>
                 <h5>p</h5>
@@ -140,7 +140,7 @@
                 <h5>a</h5>
                 <h5>n</h5>
                 <h5>t</h5>
-                <h5> </h5>
+                <h5></h5>
                 <h5>t</h5>
                 <h5>y</h5>
                 <h5>p</h5>
@@ -163,10 +163,10 @@
                       <th>Uniprot ID</th>
                       <th>Protein Name</th>
                       <th>Type</th>
-                      <th>Model PDB</th>
                       <th>LIG</th>
-                      <th>STB Class</th>
-                      <th>ModelActionMode</th>
+                      <th>PDB</th>
+                      <th>Model Action Mode</th>
+                      <th>Family</th>
                     </tr>
                   </thead>
                 </table>
@@ -217,7 +217,7 @@
           <div class="popup-title"></div>
           <div class="popup-close">
             <!-- <img src="../IMG/exit.png" alt=""> -->
-            <img src="./img/exit_grey.png" alt="" />
+            <img src="../../img/exit_grey.png" alt="" />
           </div>
         </div>
         <div class="popup-body">
@@ -225,25 +225,25 @@
             UniProtID
             ProteinName
             Type
-            Cluster
-            ModelPDB
             LIG
-            STBClass
+            PDB
             ModelActionMode
-            AllostericOrthostericETC
             Family
-            Subfamily
-            Class
-            RelatedDisease
-            internalProject
+            Cluster
+            STBCloudClass
+            Replaced
+            NOfTrials
+            AtopicDermatitisPsoriasisAsthma
+            RheumatoidArthritis
+            DiabeticNephropathy
            -->
           <h1>Model Information</h1>
           <div class="row download">
             <a id="goRCSB" href="" target="_blank"
-              ><img src="img/rcsb_logo.png" alt=""
+              ><img src="../../img/rcsb_logo.png" alt=""
             /></a>
             <a id="goUniprot" href="" target="_blank"
-              ><img src="img/uniprot_logo.png" alt=""
+              ><img src="../../img/uniprot_logo.png" alt=""
             /></a>
             <a id="getPDB" href="" download="" target="_blank">download PDB</a>
           </div>
@@ -256,48 +256,57 @@
             <input id="popProteinName" type="text" value="" readonly />
           </div>
           <div class="row popup-item">
-            <span>ModelPDB</span>
-            <input id="popModelPDB" type="text" value="" readonly />
+            <span>Type</span>
+            <input id="popType" type="text" value="" readonly />
           </div>
           <div class="row popup-item">
             <span>LIG</span>
             <input id="popLIG" type="text" value="" readonly />
           </div>
           <div class="row popup-item">
-            <span>STB Class</span>
-            <input id="popSTBClass" type="text" value="" readonly />
+            <span>PDB</span>
+            <input id="popPDB" type="text" value="" readonly />
           </div>
           <div class="row popup-item">
             <span>Model Action Mode</span>
             <input id="popModelActionMode" type="text" value="" readonly />
           </div>
           <div class="row popup-item">
-            <span>Cluster</span>
-            <input id="popCluster" type="text" value="" readonly />
-          </div>
-          <div class="row popup-item">
-            <span>Allosteric/Orthosteric/ETC</span>
-            <input id="popAl" type="text" value="" readonly />
-          </div>
-          <div class="row popup-item">
             <span>Family</span>
             <input id="popFamily" type="text" value="" readonly />
           </div>
           <div class="row popup-item">
-            <span>Subfamily</span>
-            <input id="popSubFamily" type="text" value="" readonly />
+            <span>Cluster</span>
+            <input id="popCluster" type="text" value="" readonly />
           </div>
           <div class="row popup-item">
-            <span>Class</span>
-            <input id="popClass" type="text" value="" readonly />
+            <span>STBCloudClass</span>
+            <input id="popSTBCloudClass" type="text" value="" readonly />
           </div>
           <div class="row popup-item">
-            <span>Related Disease</span>
-            <input id="popRe" type="text" value="" readonly />
+            <span>Replaced</span>
+            <input id="popReplaced" type="text" value="" readonly />
           </div>
           <div class="row popup-item">
-            <span>internalProject</span>
-            <input id="popIn" type="text" value="" readonly />
+            <span>NOfTrials</span>
+            <input id="popNOfTrials" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>Atopic Dermatitis Psoriasis Asthma</span>
+            <input
+              id="popAtopicDermatitisPsoriasisAsthma"
+              type="text"
+              value=""
+              readonly
+            />
+          </div>
+          <div class="row popup-item">
+            <span>Rheumatoid Arthritis</span>
+            <input id="popRheumatoidArthritis" type="text" value="" readonly />
+          </div>
+          <div class="row popup-item">
+            <span>Diabetic Nephropathy</span>
+            <input id="popDiabeticNephropathy" type="text" value="" readonly />
           </div>
         </div>
       </div>
@@ -542,8 +551,7 @@
     setTimeout(function () {
       $(".main").css("display", "block");
       $(".loading").css("display", "none");
-      // }, 20000);
-    }, 1000);
+    }, 5000); // loading time setting
 
     // set table function
     // $("#data tbody").append(
@@ -704,47 +712,45 @@
     /**************************************************/
     // Read csv file
     $.ajax({
-      // url: "./demo_v0.csv",
-      url: "https://raw.githubusercontent.com/JeongSooNa/1700T_model_dev/main/demo_v0.csv",
+      url: "../../data/1700T_raw_final.csv",
+      // url: "https://raw.githubusercontent.com/JeongSooNa/1700T_model_dev/main/demo_v0.csv",
       dataType: "text",
     }).done(successFunction);
     // Column
     /*
-        0. Gene(1700T)
-        1. PDB
-        2. UniProtID *
-        3. tempFlag
-        4. ProteinName *
-        5. Type *
-        6. Cluster *
-        7. ModelPDB *
-        8. LIG *
+        0. Gene(1700T)				2. UniProtID *
+        1. PDB					4. ProteinName *
+        2. UniProtID *				5. Type *
+        3. tempFlag					8. LIG *
+        4. ProteinName *				10. PDB *
+        5. Type *					12. STB-Cloud Class *
+        6. Cluster					13. Replaced *
+        7. ModelPDB					18. Family *
+        8. LIG *					29. NOfTrials *
         9. Lig Suggested
-        10. PDB
-        11. STB-Cloud Class
-        12. inPBList
-        13. Replaced
-        14. STB-Class *
-        15. manager
-        16. first1700
-        17. Title
-        18. ModelActionMode *
-        19. AllostericOrthostericETC *
-        20. isAssay
-        21. CRO
-        22. CRO target
-        23. UniProt
-        24. Family *
-        25. Subfamily *
-        26. Class *
-        27. Assay type
-        28. Assay subtype
-        29. Function Mode
-        30. Detection method
-        31. Assay Possibility
-        32. Related Disease *
-        33. internal project *
-
+        10. PDB *
+        11. Replaced
+        12. STB-Cloud Class *
+        13. Replaced *
+        14. Title
+        15. ModelActionMode
+        16. AllostericOrthostericETC
+        17. isAssay
+        18. Family *
+        19. Subfamily
+        20. Class
+        21. CRO1
+        22. AssayType1
+        23. ModeOfAssay1
+        24. CRO2
+        25. AssayType2
+        26. ModeOfAssay2
+        27. ModelCount
+        28. internalScreening
+        29. NOfTrials *
+        30. AtopicDermatitisPsoriasisAsthma
+        31. AtopicDermatitisPsoriasisAsthma
+        32. DiabeticNephropathy
         */
 
     function successFunction(data) {
@@ -753,7 +759,7 @@
       var len = colList.length;
       var str_col = colList[0];
       var column = colList[0].split(",");
-      console.log("data_length : "+len);
+      console.log("data_length : " + len); // n:3520
       // console.log(column);
       // console.log(colList[1].split(","));
       // logic
@@ -791,7 +797,7 @@
       function createTable_1() {
         db.transaction(function (tx) {
           tx.executeSql(
-            "CREATE TABLE DB1700_1(id,UniProtID,ProteinName,Type,ModelPDB,LIG,STBClass,ModelActionMode)"
+            "CREATE TABLE DB1700_1(id,UniProtID,ProteinName,Type,LIG,PDB,ModelActionMode,Family)"
           );
           // UniProtID,ProteinName,Type,Cluster,ModelPDB,LIG,STBClass,ModelActionMode
           // Assay_type,Assay_subtype,Function_Mode,Detection_method,Assay_Possibility
@@ -800,16 +806,17 @@
       function createTable_2() {
         db.transaction(function (tx) {
           tx.executeSql(
-            "CREATE TABLE DB1700_2(id,Cluster,AllostericOrthostericETC,Family,Subfamily,Class,RelatedDisease,internalProject)"
+            "CREATE TABLE DB1700_2(id,Cluster,STBCloudClass,Replaced,NOfTrials,AtopicDermatitisPsoriasisAsthma,RheumatoidArthritis,DiabeticNephropathy)"
           );
         });
       }
 
-      function createTable_3() {
-        db.transaction(function (tx) {
-          tx.executeSql("CREATE TABLE DB1700_3(id,search)");
-        });
-      }
+      //function createTable_3() {
+      //  db.transaction(function (tx) {
+      //    tx.executeSql("CREATE TABLE DB1700_3(id,search)");
+      //  });
+      //}
+
       // function createTable_header() {
       //   // For HTML table header
       //   db.transaction(function (tx) {
@@ -866,14 +873,14 @@
           tx.executeSql(
             "INSERT INTO DB1700_1 VALUES(?,?,?,?,?,?,?,?)",
             [
-              // id,UniProtID,ProteinName,Type,ModelPDB,LIG,STBClass,ModelActionMode
+              // id,UniProtID,ProteinName,Type,LIG,PDB,ModelActionMode,Family
               index,
               colList[index].split(",")[2],
               colList[index].split(",")[4],
               colList[index].split(",")[5],
-              colList[index].split(",")[7],
               colList[index].split(",")[8],
-              colList[index].split(",")[14],
+              colList[index].split(",")[10],
+              colList[index].split(",")[15],
               colList[index].split(",")[18],
             ],
             function (tx, result) {
@@ -890,15 +897,15 @@
           tx.executeSql(
             "INSERT INTO DB1700_2 VALUES(?,?,?,?,?,?,?,?)",
             [
-              // id,Cluster,AllostericOrthostericETC,Family,Subfamily,Class,RelatedDisease,internalProject
+              // id,Cluster,STBCloudClass,Replaced,NOfTrials,AtopicDermatitisPsoriasisAsthma,RheumatoidArthritis,DiabeticNephropathy
               index,
               colList[index].split(",")[6],
-              colList[index].split(",")[19],
-              colList[index].split(",")[24],
-              colList[index].split(",")[25],
-              colList[index].split(",")[26],
+              colList[index].split(",")[12],
+              colList[index].split(",")[13],
+              colList[index].split(",")[29],
+              colList[index].split(",")[30],
+              colList[index].split(",")[31],
               colList[index].split(",")[32],
-              colList[index].split(",")[33],
             ],
             function (tx, result) {
               // console.log("Query Success");
@@ -911,6 +918,7 @@
       }
 
       //STB-Class, search data
+      /*
       function insertData_3(index) {
         db.transaction(function (tx) {
           tx.executeSql(
@@ -926,6 +934,7 @@
           );
         });
       }
+      */
       // data table header ()
       // function insertData_header(index) {
       //   db.transaction(function (tx) {
@@ -953,18 +962,18 @@
       // run
       deleteAllData_1();
       deleteAllData_2();
-      deleteAllData_3();
+      // deleteAllData_3();
       // deleteAllData_header();
       createTable_1();
       createTable_2();
-      createTable_3();
+      // createTable_3();
       // createTable_header();
 
       for (var i = 1; i < 100; i++) {
-        // for (var i = 1; i < 3520; i++) {
+      //for (var i = 1; i < 3520; i++) {
         insertData_1(i);
         insertData_2(i);
-        insertData_3(i);
+        // insertData_3(i);
         // insertData_header(i);
       }
       // table이 update 되지 않을 때 drop 후 재생성 로직 필요.
@@ -1020,7 +1029,7 @@
       function mainTable() {
         var result = [];
         db.transaction(function (tx) {
-          // UniProtID,ProteinName,Type,Cluster,ModelPDB,LIG,STBClass,ModelActionMode
+          // id,UniProtID,ProteinName,Type,LIG,PDB,ModelActionMode,Family
           tx.executeSql("SELECT * FROM DB1700_1", [], function (tx, rs) {
             for (var i = 0; i < rs.rows.length; i++) {
               var row = rs.rows.item(i);
@@ -1029,10 +1038,10 @@
                 UniProtID: row["UniProtID"],
                 ProteinName: row["ProteinName"],
                 Type: row["Type"],
-                ModelPDB: row["ModelPDB"],
                 LIG: row["LIG"],
-                STBClass: row["STBClass"],
+                PDB: row["PDB"],
                 ModelActionMode: row["ModelActionMode"],
+                Family: row["Family"],
               };
             }
 
@@ -1049,13 +1058,13 @@
                 "</td><td id='data-td'>" +
                 result[i].Type +
                 "</td><td id='data-td'>" +
-                result[i].ModelPDB +
-                "</td><td id='data-td'>" +
                 result[i].LIG +
                 "</td><td id='data-td'>" +
-                result[i].STBClass +
+                result[i].PDB +
                 "</td><td id='data-td'>" +
                 result[i].ModelActionMode +
+                "</td><td id='data-td'>" +
+                result[i].Family +
                 "</td id='data-td'></tr>";
               /*
                     Option
@@ -1073,22 +1082,22 @@
 
               // Include Family Kinase
               if ($("#FamilyKinase").is(":checked")) {
-                if (!result[i].STBClass.includes("Kinase")) {
+                if (!result[i].Family.includes("Kinase")) {
                   continue;
                 }
               }
               // Include Family Peptidase
               if ($("#FamilyPeptidase").is(":checked")) {
-                if (!result[i].STBClass.includes("Peptidase")) {
+                if (!result[i].Family.includes("Peptidase")) {
                   continue;
                 }
               }
               // Include Family Others
               if ($("#FamilyOthers").is(":checked")) {
-                if (result[i].STBClass.includes("Kinase")) {
+                if (result[i].Family.includes("Kinase")) {
                   continue;
                 }
-                if (result[i].STBClass.includes("Peptidase")) {
+                if (result[i].Family.includes("Peptidase")) {
                   continue;
                 }
               }
@@ -1134,6 +1143,10 @@
         });
         return result;
       }
+
+      // search enter function
+      // will be update
+
       mainTable();
 
       // reload and append table
@@ -1166,7 +1179,7 @@
           $(".popup-loading").css("display", "none");
         }, 3000);
 
-        // DB1700_1(id,UniProtID,ProteinName,Type,Cluster,ModelPDB,LIG,STBClass)
+        // DB1700_1(id,UniProtID,ProteinName,Type,LIG,PDB,ModelActionMode,Family)
         var result_1 = [];
         var result_2 = [];
         // var result_3 = [];
@@ -1179,17 +1192,17 @@
                 UniProtID: row["UniProtID"],
                 ProteinName: row["ProteinName"],
                 Type: row["Type"],
-                ModelPDB: row["ModelPDB"],
                 LIG: row["LIG"],
-                STBClass: row["STBClass"],
+                PDB: row["PDB"],
                 ModelActionMode: row["ModelActionMode"],
+                Family: row["Family"],
               };
             }
             // Do append in this function
             $("#goRCSB").attr(
               "href",
               "https://www.rcsb.org/structure/" +
-                result_1[index_n - 1].ModelPDB.substr(0, 4)
+                result_1[index_n - 1].PDB.substr(0, 4)
             );
             // console.log(result_1[index_n - 1].ModelPDB.substr(0,4))
             $("#goUniprot").attr(
@@ -1200,21 +1213,22 @@
             );
             $("#popUniProtID").val(result_1[index_n - 1].UniProtID);
             $("#popProteinName").val(result_1[index_n - 1].ProteinName);
-            $("#popModelPDB").val(result_1[index_n - 1].ModelPDB);
+            $("#popType").val(result_1[index_n - 1].Type);
             $("#popLIG").val(result_1[index_n - 1].LIG);
-            $("#popSTBClass").val(result_1[index_n - 1].STBClass);
+            $("#popPDB").val(result_1[index_n - 1].PDB);
             $("#popModelActionMode").val(result_1[index_n - 1].ModelActionMode);
+            $("#popFamily").val(result_1[index_n - 1].Family);
             $("#getPDB").attr(
               "href",
               "https://files.rcsb.org/download/" +
-                result_1[index_n - 1].ModelPDB.substr(0, 4) +
+                result_1[index_n - 1].PDB.substr(0, 4) +
                 ".pdb"
             );
             // $("#getPDB").attr("download",result_1[index_n - 1].ModelPDB.substr(0,4) + ".pdb")
           });
         });
 
-        // DB1700_2(id,ModelActionMode,AllostericOrthostericETC,Family,Subfamily,Class,RelatedDisease,internalProject)
+        // DB1700_2(id,Cluster,STBCloudClass,Replaced,NOfTrials,AtopicDermatitisPsoriasisAsthma,RheumatoidArthritis,DiabeticNephropathy)
         db.transaction(function (tx) {
           tx.executeSql("SELECT * FROM DB1700_2", [], function (tx, rs) {
             for (var i = 0; i < rs.rows.length; i++) {
@@ -1222,22 +1236,29 @@
               result_2[i] = {
                 id: row["id"],
                 Cluster: row["Cluster"],
-                AllostericOrthostericETC: row["AllostericOrthostericETC"],
-                Family: row["Family"],
-                Subfamily: row["Subfamily"],
-                Class: row["Class"],
-                RelatedDisease: row["RelatedDisease"],
-                internalProject: row["internalProject"],
+                STBCloudClass: row["STBCloudClass"],
+                Replaced: row["Replaced"],
+                NOfTrials: row["NOfTrials"],
+                AtopicDermatitisPsoriasisAsthma:
+                  row["AtopicDermatitisPsoriasisAsthma"],
+                RheumatoidArthritis: row["RheumatoidArthritis"],
+                DiabeticNephropathy: row["DiabeticNephropathy"],
               };
             }
             // Do append in this function
             $("#popCluster").val(result_2[index_n - 1].Cluster);
-            $("#popAl").val(result_2[index_n - 1].AllostericOrthostericETC);
-            $("#popFamily").val(result_2[index_n - 1].Family);
-            $("#popSubFamily").val(result_2[index_n - 1].Subfamily);
-            $("#popClass").val(result_2[index_n - 1].Class);
-            $("#popRe").val(result_2[index_n - 1].RelatedDisease);
-            $("#popIn").val(result_2[index_n - 1].internalProject);
+            $("#popSTBCloudClass").val(result_2[index_n - 1].STBCloudClass);
+            $("#popReplaced").val(result_2[index_n - 1].Replaced);
+            $("#popNOfTrials").val(result_2[index_n - 1].NOfTrials);
+            $("#popAtopicDermatitisPsoriasisAsthma").val(
+              result_2[index_n - 1].AtopicDermatitisPsoriasisAsthma
+            );
+            $("#popRheumatoidArthritis").val(
+              result_2[index_n - 1].RheumatoidArthritis
+            );
+            $("#popDiabeticNephropathy").val(
+              result_2[index_n - 1].DiabeticNephropathy
+            );
           });
         });
         // // DB1700_3(ModelActionMode,AllostericOrthosteric,isAssay,CRO,CROTarget,UniProt,Family,Subfamily)
@@ -1264,6 +1285,4 @@
       });
     }
   </script>
-
-  <script></script>
 </html>
