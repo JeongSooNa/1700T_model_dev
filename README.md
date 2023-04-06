@@ -23,6 +23,8 @@
 
 ### **Overview**
 
+- [visit main page](./src/html/demo.html)
+
 - Main Page
     - Main Banner 및 link 이동을 위한 Navigator
 
