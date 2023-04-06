@@ -17,6 +17,8 @@
 
 3. 다양한 옵션들로 카테고리 분류, 검색 기능을 통한 유연한 데이터 조회
 
+4. 내부 유저 사용을 위한 통합된 사내 타겟 DB 구축
+
 ---
 
 ### **Overview**
@@ -24,32 +26,53 @@
 - Main Page
     - Main Banner 및 link 이동을 위한 Navigator
 
+<!-- ![jpg](./img/MOD_main.png) -->
+<center><img src="./img/MOD_main.png" width="600" height="300"></center>
+
+---
+
 - Database Page
-    - 검색 Bar & 검색 기준 설정
+    - 검색 기능
     - Database table 표기
-    - 하단 Footer에 회사 정보 및 contect, reference 표기
+    - 옵션 설정으로 필터링 기능
+    <!-- - 하단 Footer에 회사 정보 및 contect, reference 표기 -->
+    
+<!-- ![jpg](./img/MOD_Table.png) -->
+<center><img src="./img/MOD_Table.png" width="600" height="300"></center>
+
+
+- Database popup
+    - 상세내용
+    - RCSB, Uniprot, PDB down 기능
+
+<!-- ![jpg](./img/MOD_popup.png) -->
+<center><img src="./img/MOD_popup.png" width="600" height="300"></center>
 
 ---
 
-### **Request**
-- Gene name / UniprotID 검색을 통한 구조 및 실험 가부 확인
-- 전체적인 Database 관리 및 확인
-- 그 외 진행 중 Optional 기능 및 page 추가
+### **Process**
+1. Project 기획 > 개발일정 설정 > 기능 명세서 작성
+2. Web page 구현을 위한 HTML, CSS, Javascript 사용
+3. Database : 데이터 양이 많지 않아 사용에 용이한 WebSQL 사용
+4. Database Connection : raw data(.csv) 읽은 뒤 Database 생성 및 transaction / executeSql 사용 관리
+5. Publishing : Main Page 생성을 통한 기능 확장 및 UI 개선
+6. DB Table : HTML table 활용 DB에서 append
+7. DB search : Uniprot ID로 검색 기능
+8. DB option : Column 및 조회 된 데이터 필터링
+9. DB popup : 상세 내용 및 링크, 다운로드 파일 구현
+10. Final Inspection : demo version 피드백으로 개선사항 및 최종 raw data 반영
+    - ADSP팀, 신지윤 박사님, 허정은 주임님
+
 
 ---
 
-### **Contents**
-- project 진행 시 기능명세서 및 개발 일정, issue 정리 사항 file 생성
-- Web page 구현을 위한 Springboot (MVC 패턴을 활용한 API 호출)
-- Database : MySQl 혹은 data가 많지 않을 시 서버에 업로드
-- Search 기능 우선 구현 후 frontend Backend 연결.
 
----
-
-### **Datebase Table**
-|UniProt-ID|Protein-Name|Type|STB-Class|1700T_1st|실험가부|담당자|CRO|CRO target|Family|Subfamily|Class|Assay type|Assay subtype|Function Mode|Detection method|
-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
-|O00763|ACACB|wild|0|1|1|신지윤|BPSbio|ACC2|-|-|metabolic diseases including obesity and diabetes|-|-|inhibition|ADP-Glo™ reagents|
+### **Improvements**
+- 검색 기능 개선 (Uniprot ID 이 외 다양한 검색 요구)
+- 옵션 추가 (다양한 옵션 추가로 편의성 제공)
+- 실험가부 및 Assay data 추가
+- 단백질 구조 viewer 페이지 및 기능 추가
+- 그 외 진행 중 Optional 기능 추가
 
 ---
 
@@ -57,27 +80,8 @@
 - HTML
 - CSS
 - Javascript
-- Java
-- MySQL
-- JSP
-
----
-
-.
-
----
-
-### **Environment**
-- OS : Window, Linux
-- Installation : Chrome
-- Framework : SpringBoot
-- Development Tool : Eclipse, VS Code
-
----
-
-### **개발 일정**
-
-[download](https://github.com/JeongSooNa/1700T_model_dev/blob/main/progress/1700T_model_dev_%EA%B0%9C%EB%B0%9C%EC%9D%BC%EC%A0%95_jsna_20230125.xlsx?raw=true)
+- WebSQL
+- Installation : VS Code
 
 ---
 
