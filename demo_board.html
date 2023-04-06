@@ -119,6 +119,35 @@
                 <input id="FunctionOthers" type="checkbox" />
               </div>
             </div>
+            <div class="optoin">
+              <p>Type</p>
+              <div class="row box-wrapper">
+                <h5>w</h5>
+                <h5>i</h5>
+                <h5>l</h5>
+                <h5>d</h5>
+                <h5> </h5>
+                <h5>t</h5>
+                <h5>y</h5>
+                <h5>p</h5>
+                <h5>e</h5>
+                <input id="TypeWild" type="checkbox" />
+              </div>
+              <div class="row box-wrapper">
+                <h5>m</h5>
+                <h5>u</h5>
+                <h5>t</h5>
+                <h5>a</h5>
+                <h5>n</h5>
+                <h5>t</h5>
+                <h5> </h5>
+                <h5>t</h5>
+                <h5>y</h5>
+                <h5>p</h5>
+                <h5>e</h5>
+                <input id="TypeMutant" type="checkbox" />
+              </div>
+            </div>
           </div>
           <div class="row hide">
             <h5 id="hide">◀ close</h5>
@@ -208,7 +237,7 @@
             RelatedDisease
             internalProject
            -->
-           <h1>Model Information</h1>
+          <h1>Model Information</h1>
           <div class="row download">
             <a id="goRCSB" href="" target="_blank"
               ><img src="img/rcsb_logo.png" alt=""
@@ -655,6 +684,17 @@
         $("#FunctionAntagonist").prop("checked", false);
       }
     });
+    $("#TypeWild").click(function () {
+      if ($("#TypeWild").is(":checked")) {
+        $("#TypeMutant").prop("checked", false);
+      }
+    });
+    $("#TypeMutant").click(function () {
+      if ($("#TypeMutant").is(":checked")) {
+        $("#TypeWild").prop("checked", false);
+      }
+    });
+
     // Family
   </script>
   <!-- Database script -->
@@ -713,7 +753,7 @@
       var len = colList.length;
       var str_col = colList[0];
       var column = colList[0].split(",");
-      console.log(len);
+      console.log("data_length : "+len);
       // console.log(column);
       // console.log(colList[1].split(","));
       // logic
@@ -870,17 +910,18 @@
         });
       }
 
-      //search data
+      //STB-Class, search data
       function insertData_3(index) {
         db.transaction(function (tx) {
           tx.executeSql(
             "INSERT INTO DB1700_3 VALUES(?,?,?,?,?,?,?,?)",
+            //[index, colList[index].split(",")[34]],
             [index, colList[index].split(",")[34]],
             function (tx, result) {
               // console.log("Query Success");
             },
             function (tx, error) {
-              console.log("Query Error : " + error.massage);
+              //console.log("Query Error : " + error.massage);
             }
           );
         });
@@ -1073,6 +1114,19 @@
                 }
               }
 
+              // Include Type wild
+              if ($("#TypeWild").is(":checked")) {
+                if (!result[i].Type.includes("wild")) {
+                  continue;
+                }
+              }
+              // Include Type mutant
+              if ($("#TypeMutant").is(":checked")) {
+                if (result[i].Type.includes("wild")) {
+                  continue;
+                }
+              }
+
               // append
               $("#data tbody").append(html);
             }
@@ -1132,16 +1186,30 @@
               };
             }
             // Do append in this function
-            $("#goRCSB").attr("href","https://www.rcsb.org/structure/"+ result_1[index_n - 1].ModelPDB.substr(0,4) )
+            $("#goRCSB").attr(
+              "href",
+              "https://www.rcsb.org/structure/" +
+                result_1[index_n - 1].ModelPDB.substr(0, 4)
+            );
             // console.log(result_1[index_n - 1].ModelPDB.substr(0,4))
-            $("#goUniprot").attr("href","https://www.uniprot.org/uniprotkb/"+ result_1[index_n - 1].UniProtID +"/entry")
+            $("#goUniprot").attr(
+              "href",
+              "https://www.uniprot.org/uniprotkb/" +
+                result_1[index_n - 1].UniProtID +
+                "/entry"
+            );
             $("#popUniProtID").val(result_1[index_n - 1].UniProtID);
             $("#popProteinName").val(result_1[index_n - 1].ProteinName);
             $("#popModelPDB").val(result_1[index_n - 1].ModelPDB);
             $("#popLIG").val(result_1[index_n - 1].LIG);
             $("#popSTBClass").val(result_1[index_n - 1].STBClass);
             $("#popModelActionMode").val(result_1[index_n - 1].ModelActionMode);
-            $("#getPDB").attr("href","https://files.rcsb.org/download/" + result_1[index_n - 1].ModelPDB.substr(0,4) + ".pdb")
+            $("#getPDB").attr(
+              "href",
+              "https://files.rcsb.org/download/" +
+                result_1[index_n - 1].ModelPDB.substr(0, 4) +
+                ".pdb"
+            );
             // $("#getPDB").attr("download",result_1[index_n - 1].ModelPDB.substr(0,4) + ".pdb")
           });
         });
