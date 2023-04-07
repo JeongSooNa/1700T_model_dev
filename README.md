@@ -1,4 +1,4 @@
-![jpg](https://www.syntekabio.com/asset/images/all/main_logo_eng.png)
+![jpg](./img/STB_logo.png)
 # **Model of Deepmatcher Production Report**
 
 #### Team : AI Drug Development Operation Team
