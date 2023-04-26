@@ -18,32 +18,53 @@
         />
       </a>
       <div class="col headline">
-        <div class="headline-title">Date : 2023.04.25</div>
-        <table>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>one</td>
-              <td>first</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>two</td>
-              <td>second</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>three</td>
-              <td>third</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="mySlideDiv fade active">
+          <h1>Check recently RCSB released data</h1>
+          <h3>Update Date : 2023.04.26</h3>
+          <div class="row recently-rcsb">
+            
+          </div>
+        </div>
+        <div class="mySlideDiv fade">
+          <h1>This is Sparta</h1>
+        </div>
+        <div class="mySlideDiv fade">
+          <h1>니가 가라 하와이</h1>
+        </div>
+        <div class="mySlideDiv fade">
+          <h1>사랑은 얄미운 나비인가봐</h1>
+        </div>
+        <div class="mySlideDiv fade">
+          <h1>Help me</h1>
+        </div>
+
+        <a class="prev" onclick="prevSlide()">&#10094;</a>
+        <a class="next" onclick="nextSlide()">&#10095;</a>
       </div>
-      <div class="chart">
-        <canvas id="myChart"></canvas>
+      <div class="row main-contents-wrapper">
+        <div class="contents-1">
+          asd
+        </div>
+        <div class="row contents-2">
+          <div class="col contents-2-1">
+            <canvas id="myChart-1"></canvas>
+            <canvas id="myChart-2"></canvas>
+          </div>
+          <div class="col contents-2-2">
+            <canvas id="myChart-3"></canvas>
+            <canvas id="myChart-4"></canvas>
+          </div>
+        </div>
       </div>
     </div>
   </body>
+  <!-- JQuery -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <!-- Chart.js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../js/news.js"></script>
 </html>

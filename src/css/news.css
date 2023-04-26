@@ -54,21 +54,97 @@
   border-radius: 10px;
   border: 3px solid white;
   color: white;
-}
-.headline-title {
+  /* overflow: hidden; */
   text-align: center;
-  margin: 10px 0;
+  position: relative;
 }
 
-.headline tr {
+/* Slides */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.main-contents-wrapper{
+  margin: 10px auto;
   width: 90%;
-}
-.headline td {
-  width: 30%;
-  text-align: center;
+  border: 3px solid white;
+  border-radius: 10px;
+  color: white;
+  justify-content: space-around;
 }
 
-.chart {
-  width: 500px;
-  height: 500px;
+.contents-2{
+  width: 60%;
+}
+
+.contents-2-1{
+  width: 50%;
+}
+.contents-2-2{
+  width: 50%;
+}
+#myChart-1{
+  width: 40%;
+  height: 40%;
+}
+#myChart-2{
+  width: 40%;
+  height: 40%;
+}
+#myChart-3{
+  width: 40%;
+  height: 40%;
+}
+#myChart-4{
+  width: 40%;
+  height: 40%;
 }
