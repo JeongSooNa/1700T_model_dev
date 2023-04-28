@@ -148,3 +148,11 @@
   width: 40%;
   height: 40%;
 }
+
+.footer{
+  color: white;
+  text-align: center;
+}
+.footer p{
+  font-size: 7px;
+}
