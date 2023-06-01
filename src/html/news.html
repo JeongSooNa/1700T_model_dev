@@ -6,17 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../css/news.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
       <!-- logo -->
-      <a href="./index.html">
-        <img
-          id="logo"
-          src="https://www.syntekabio.com/asset/images/all/main_logo_white_eng.png"
-          alt=""
-        />
-      </a>
+      <div class="row title-wrapper">
+        <a href="./index.html">
+          <img
+            id="logo"
+            src="https://www.syntekabio.com/asset/images/sub_01/ci-main-row-en.png"
+            alt=""
+          />
+        </a>
+        <h1>RCSB Released Data</h1>
+      </div>
       <div class="col headline">
         <div class="mySlideDiv fade active">
           <h1>Check recently RCSB released data</h1>
@@ -32,30 +41,256 @@
         </div>
         <div class="mySlideDiv fade">
           <h1>Last 7 days Homo sapiens Protein Structure</h1>
-          <h3><a href='https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_accession_info.initial_release_date%22%2C%22operator%22%3A%22range%22%2C%22value%22%3A%7B%22from%22%3A%22now-1w%22%2C%22include_lower%22%3Afalse%2C%22to%22%3A%22now%22%2C%22include_upper%22%3Atrue%7D%7D%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%5D%2C%22logical_operator%22%3A%22and%22%2C%22label%22%3A%22text%22%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%2C%22return_type%22%3A%22entry%22%2C%22request_options%22%3A%7B%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A25%7D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22scoring_strategy%22%3A%22combined%22%7D%2C%22request_info%22%3A%7B%22query_id%22%3A%22977c3429d9b3b7e7c3101379fd9c8604%22%7D%7D' target="_blank">Go to RCSB Page</a></h3>
+          <h3>
+            <a
+              href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_accession_info.initial_release_date%22%2C%22operator%22%3A%22range%22%2C%22value%22%3A%7B%22from%22%3A%22now-1w%22%2C%22include_lower%22%3Afalse%2C%22to%22%3A%22now%22%2C%22include_upper%22%3Atrue%7D%7D%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%5D%2C%22logical_operator%22%3A%22and%22%2C%22label%22%3A%22text%22%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%2C%22return_type%22%3A%22entry%22%2C%22request_options%22%3A%7B%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A25%7D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22scoring_strategy%22%3A%22combined%22%7D%2C%22request_info%22%3A%7B%22query_id%22%3A%22977c3429d9b3b7e7c3101379fd9c8604%22%7D%7D"
+              target="_blank"
+              >Go to RCSB Page</a
+            >
+          </h3>
         </div>
 
         <a class="prev" onclick="prevSlide()">&#10094;</a>
         <a class="next" onclick="nextSlide()">&#10095;</a>
       </div>
       <div class="row main-contents-wrapper">
-        <div class="contents-1">
-          <h1><span>Date : </span><span>May 2023</span></h1>
+        <div class="col left">
+          <h2>DB</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Uniprot ID</th>
+                <th>Protein Name</th>
+                <th>LiG</th>
+                <th>PDB</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="table-body">
+            <table>
+              <tbody id="table1700T">
+                <!-- data sample -->
+                <tr>
+                  <td>P47929</td>
+                  <td>LGALS7</td>
+                  <td>EDO</td>
+
+                  <td>7N4O</td>
+                </tr>
+                <tr>
+                  <td>P47929</td>
+                  <td>LGALS7</td>
+                  <td>GOL</td>
+
+                  <td>7N4O</td>
+                </tr>
+                <tr>
+                  <td>P47929</td>
+                  <td>LGALS7</td>
+                  <td>GOL</td>
+
+                  <td>7N57</td>
+                </tr>
+                <tr>
+                  <td>P47929</td>
+                  <td>LGALS7</td>
+                  <td>GOL</td>
+
+                  <td>7N6C</td>
+                </tr>
+                <tr>
+                  <td>P47929</td>
+                  <td>LGALS7</td>
+                  <td>EDO</td>
+
+                  <td>7N8D</td>
+                </tr>
+                <tr>
+                  <td>P47929</td>
+                  <td>LGALS7</td>
+                  <td></td>
+                  <td>7N8D</td>
+                </tr>
+                <tr>
+                  <td>P47929</td>
+                  <td>LGALS7</td>
+                  <td>EDO</td>
+
+                  <td>7N8G</td>
+                </tr>
+                <tr>
+                  <td>P47929</td>
+                  <td>LGALS7</td>
+                  <td>GOL</td>
+
+                  <td>7N96</td>
+                </tr>
+                <tr>
+                  <td>O60911</td>
+                  <td>CTSV</td>
+                  <td>CL</td>
+                  <td>7QNS</td>
+                </tr>
+                <tr>
+                  <td>P00918</td>
+                  <td>CA2</td>
+                  <td>ZN</td>
+
+                  <td>7QNV</td>
+                </tr>
+                <tr>
+                  <td>P18858</td>
+                  <td>LIG1</td>
+                  <td>AMP</td>
+                  <td>7QNZ</td>
+                </tr>
+                <tr>
+                  <td>P12004</td>
+                  <td>PCNA</td>
+                  <td></td>
+                  <td>7QNZ</td>
+                </tr>
+                <tr>
+                  <td>P00441</td>
+                  <td>SOD1</td>
+                  <td></td>
+                  <td>7T8E</td>
+                </tr>
+                <tr>
+                  <td>P00441</td>
+                  <td>SOD1</td>
+                  <td>9JT</td>
+                  <td>7T8F</td>
+                </tr>
+                <tr>
+                  <td>P00441</td>
+                  <td>SOD1</td>
+                  <td>Q8H</td>
+                  <td>7T8G</td>
+                </tr>
+                <tr>
+                  <td>P00441</td>
+                  <td>SOD1</td>
+                  <td>Q8E</td>
+                  <td>7T8H</td>
+                </tr>
+                <tr>
+                  <td>P08172</td>
+                  <td>CHRM2</td>
+                  <td>ACH</td>
+                  <td>7T90</td>
+                </tr>
+                <tr>
+                  <td>P09471</td>
+                  <td>GNAO1</td>
+                  <td></td>
+                  <td>7T90</td>
+                </tr>
+                <tr>
+                  <td>P62873</td>
+                  <td>GNB1</td>
+                  <td></td>
+                  <td>7T90</td>
+                </tr>
+                <tr>
+                  <td>P59768</td>
+                  <td>GNG2</td>
+                  <td></td>
+                  <td>7T90</td>
+                </tr>
+                <tr>
+                  <td>P08172</td>
+                  <td>CHRM2</td>
+                  <td>ACH</td>
+                  <td>7T94</td>
+                </tr>
+                <tr>
+                  <td>P08172</td>
+                  <td>CHRM2</td>
+                  <td>2CU</td>
+                  <td>7T94</td>
+                </tr>
+                <tr>
+                  <td>P09471</td>
+                  <td>GNAO1</td>
+                  <td></td>
+                  <td>7T94</td>
+                </tr>
+                <tr>
+                  <td>P62873</td>
+                  <td>GNB1</td>
+                  <td></td>
+                  <td>7T94</td>
+                </tr>
+                <tr>
+                  <td>P59768</td>
+                  <td>GNG2</td>
+                  <td></td>
+                  <td>7T94</td>
+                </tr>
+                <tr>
+                  <td>P08172</td>
+                  <td>CHRM2</td>
+                  <td>ACH</td>
+                  <td>7T96</td>
+                </tr>
+                <tr>
+                  <td>P09471
+                  </td>
+                  <td>GNAO1
+                  </td>
+                  <td></td>
+                  <td>7T96
+                  </td>
+                </tr>
+                <tr>
+                  <td>P62873
+                  </td>
+                  <td>GNB1
+                  </td>
+                  <td></td>
+                  <td>7T96
+                  </td>
+                </tr>
+                <tr>
+                  <td>P59768
+                  </td>
+                  <td>GNG2
+                  </td>
+                  <td></td>
+                  <td>7T96
+                  </td>
+                </tr>
+                <!-- sample data -->
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="row contents-2">
-          <div class="col contents-2-1">
-            <canvas id="myChart-1"></canvas>
-            <canvas id="myChart-2"></canvas>
+        <div class="col right">
+          <div class="row right-1">
+            <div class="family">
+              <canvas id="chart-1"></canvas>
+            </div>
+            <div class="apo">
+              <div class="apo-1">
+                <canvas id="chart-2"></canvas>
+              </div>
+              <div class="apo-2">
+                <canvas id="chart-3"></canvas>
+              </div>
+              <div class="apo-3">
+                <canvas id="chart-4"></canvas>
+              </div>
+              <a class="canvasprev">&#10094;</a>
+              <a class="canvasnext">&#10095;</a>
+            </div>
           </div>
-          <div class="col contents-2-2">
-            <canvas id="myChart-3"></canvas>
-            <canvas id="myChart-4"></canvas>
-          </div>
+          <div class="right-2"></div>
         </div>
       </div>
       <div class="footer">
         <p>
-          © 2016 Syntekabio, Inc. All rights reserved. <br>
+          © 2023 Syntekabio, Inc. All rights reserved. <br />
           이메일무단수집거부 | 개인정보취급방침
         </p>
       </div>
