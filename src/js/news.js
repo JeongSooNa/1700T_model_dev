@@ -140,3 +140,38 @@ new Chart(ctx1, {
     }
   }
 });
+
+new Chart(ctx2, {
+  type: 'line',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+    datasets: [{
+      // label: 'Target per Family',
+      data: [188, 297, 345, 332, 87],
+      backgroundColor:[
+        'rgba(54, 160, 235, 0.4)',
+        'rgba(54, 120, 235, 0.2)',
+        'rgba(54, 240, 235, 0.2)',
+        'rgba(54, 100, 235, 0.2)',
+        'rgba(54, 0, 235, 0.2)'
+      ],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    plugins:{
+      title:{
+        display:true,
+        text : "Update Gene per Month"
+      },
+      legend:{
+        display: false
+      }
+    },
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
