@@ -182,7 +182,8 @@ $("#TypeMutant").click(function () {
 
 // Read csv file
 $.ajax({
-  url: "../data/1700T_raw_final.csv",
+  // url: "../data/1700T_raw_final.csv",
+  url: "https://raw.githubusercontent.com/JeongSooNa/1700T_model_dev/main/data/1700T_raw_final.csv",
   dataType: "text",
 }).done(successFunction);
 //   console.log(data);
@@ -236,6 +237,7 @@ function successFunction(data) {
     // load data
     var html = "";
     for (var i = 1; i < 100; i++) {
+    // for (var i = 1; i < 3520; i++) {
       // filtering
       var search = $(".search-bar input").val();
       if (search != "") {
@@ -396,36 +398,38 @@ function successFunction(data) {
 const ctx1 = document.getElementById("chart-1");
 
 new Chart(ctx1, {
-  type: 'bar',
+  type: "bar",
   data: {
-    labels: ['Kinase', 'Methylase', 'Peptidase', 'Protease', 'ect'],
-    datasets: [{
-      // label: 'Target per Family',
-      data: [977, 14, 255, 147, 305],
-      backgroundColor:[
-        'rgba(54, 160, 235, 0.4)',
-        'rgba(54, 120, 235, 0.2)',
-        'rgba(54, 240, 235, 0.2)',
-        'rgba(54, 100, 235, 0.2)',
-        'rgba(54, 0, 235, 0.2)'
-      ],
-      borderWidth: 1
-    }]
+    labels: ["Kinase", "Methylase", "Peptidase", "Protease", "ect"],
+    datasets: [
+      {
+        // label: 'Target per Family',
+        data: [977, 14, 255, 147, 305],
+        backgroundColor: [
+          "rgba(54, 160, 235, 0.4)",
+          "rgba(54, 120, 235, 0.2)",
+          "rgba(54, 240, 235, 0.2)",
+          "rgba(54, 100, 235, 0.2)",
+          "rgba(54, 0, 235, 0.2)",
+        ],
+        borderWidth: 1,
+      },
+    ],
   },
   options: {
-    plugins:{
-      title:{
-        display:true,
-        text : "Target per Family"
+    plugins: {
+      title: {
+        display: true,
+        text: "Target per Family",
       },
-      legend:{
-        display: false
-      }
+      legend: {
+        display: false,
+      },
     },
     scales: {
       y: {
-        beginAtZero: true
-      }
-    }
-  }
+        beginAtZero: true,
+      },
+    },
+  },
 });
