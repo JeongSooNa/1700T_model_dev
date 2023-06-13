@@ -237,7 +237,7 @@ function successFunction(data) {
     // load data
     var html = "";
     for (var i = 1; i < 100; i++) {
-    // for (var i = 1; i < 3520; i++) {
+      // for (var i = 1; i < 3520; i++) {
       // filtering
       var search = $(".search-bar input").val();
       if (search != "") {
@@ -396,40 +396,105 @@ function successFunction(data) {
 // Page 3
 // Chart
 const ctx1 = document.getElementById("chart-1");
+var dataFirst = {
+  label: "Number of PDB",
+  data: [314, 417, 486, 362, 119],
+  lineTension: 0,
+  fill: false,
+  borderColor: "rgb(100, 200, 255)",
+};
 
-new Chart(ctx1, {
-  type: "bar",
-  data: {
-    labels: ["Kinase", "Methylase", "Peptidase", "Protease", "ect"],
-    datasets: [
-      {
-        // label: 'Target per Family',
-        data: [977, 14, 255, 147, 305],
-        backgroundColor: [
-          "rgba(54, 160, 235, 0.4)",
-          "rgba(54, 120, 235, 0.2)",
-          "rgba(54, 240, 235, 0.2)",
-          "rgba(54, 100, 235, 0.2)",
-          "rgba(54, 0, 235, 0.2)",
-        ],
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    plugins: {
-      title: {
-        display: true,
-        text: "Target per Family",
-      },
-      legend: {
-        display: false,
-      },
+var dataSecond = {
+  label: "Number of Gene",
+  data: [205, 317, 372, 357, 97],
+  lineTension: 0,
+  fill: false,
+  borderColor: "rgb(180, 280, 255)",
+};
+
+var speedData = {
+  labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+  datasets: [dataFirst, dataSecond],
+};
+
+var chartOptions = {
+  plugins: {
+    title: {
+      display: true,
+      text: "구조 정보 업데이트 현황",
+      color: "white",
     },
-    scales: {
-      y: {
-        beginAtZero: true,
+    legend: {
+      display: true,
+      labels: {
+        fontColor: "black",
+        color: "white",
       },
     },
   },
+  scales: {
+    y: {
+      ticks: { color: "white", beginAtZero: true },
+    },
+    x: {
+      ticks: { color: "white" },
+    },
+  },
+};
+
+var lineChart = new Chart(ctx1, {
+  type: "line",
+  data: speedData,
+  options: chartOptions,
 });
+
+// new Chart(ctx1, {
+//   type: "line",
+//   data: [
+//     {
+//       labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+//       datasets: [
+//         {
+//           label: 'Number of PDB',
+//           data: [314, 417, 486, 362, 119],
+//           borderWidth: 1,
+//           borderColor: '#36A2EB',
+//         },
+//       ],
+//     },
+//     {
+//       labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+//       datasets: [
+//         {
+//           label: 'Number of Gene',
+//           data: [205,317,372,357,97],
+//           borderWidth: 1,
+//           borderColor: '#36A2EB',
+//         },
+//       ],
+//     },
+//   ],
+//   options: {
+//     plugins: {
+//       title: {
+//         display: true,
+//         text: "구조 정보 업데이트 현황",
+//         color: 'white',
+//       },
+//       legend: {
+//         display: true,
+//         labels: {
+//           color: 'white',
+//         }
+//       },
+//     },
+//     scales: {
+//       y: {
+//         ticks: { color: 'white', beginAtZero: true }
+//       },
+//       x: {
+//         ticks: { color: 'white'}
+//       },
+//     },
+//   },
+// });

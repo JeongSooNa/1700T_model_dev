@@ -7,9 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/news_scroll.css" />
     <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
@@ -33,7 +36,12 @@
           </video>
           <div class="summary-text">
             <!-- <h1>Model of DeepMatcher</h1> -->
-            <h1><img src="../../img/Model of DeepMatcher - MarkMaker Logo.png" alt="" /></h1>
+            <h1>
+              <img
+                src="../../img/Model of DeepMatcher - MarkMaker Logo.png"
+                alt=""
+              />
+            </h1>
             <br />
             <br />
             <p>
@@ -51,7 +59,7 @@
             </p>
             <!-- <img src="../../img/DeepMatcher_white_logo.png" alt=""> -->
             <!-- <h2>DeepMatcher</h2> -->
-            <h2><img src="../../img/DeepMatcher_white_logo.png" alt=""></h2>
+            <h2><img src="../../img/DeepMatcher_white_logo.png" alt="" /></h2>
             <p>
               Syntekabio의 DeepMatcher®는 인공지능 심층 학습법 (AI Deep
               Learning) 기반의 Small molecule screening platform 입니다.
@@ -69,35 +77,49 @@
               바이오 신약 개발 전반, 신약후보 대상단백질 발굴, 약물 재창출 등
               제약사업 전반에 높은 활용도를 가지고 있습니다.
             </p>
+            <div class="headline-wrapper">
+              <div class="col headline">
+                <div class="mySlideDiv fade active">
+                  <h1>Update Date : 2023.06.13</h1>
+                  <div class="row recently-rcsb"></div>
+                </div>
+                <div class="mySlideDiv fade">
+                  <h1>Key Target Protein</h1>
+                </div>
+                <div class="mySlideDiv fade">
+                  <h1>Syntekabio</h1>
+                  <h3>AI Drug Development & Discovery</h3>
+                </div>
+                <div class="mySlideDiv fade">
+                  <h1>Last 7 days Homo sapiens Protein Structure</h1>
+                  <h3>
+                    <a
+                      href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_accession_info.initial_release_date%22%2C%22operator%22%3A%22range%22%2C%22value%22%3A%7B%22from%22%3A%22now-1w%22%2C%22include_lower%22%3Afalse%2C%22to%22%3A%22now%22%2C%22include_upper%22%3Atrue%7D%7D%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%5D%2C%22logical_operator%22%3A%22and%22%2C%22label%22%3A%22text%22%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%2C%22return_type%22%3A%22entry%22%2C%22request_options%22%3A%7B%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A25%7D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22scoring_strategy%22%3A%22combined%22%7D%2C%22request_info%22%3A%7B%22query_id%22%3A%22977c3429d9b3b7e7c3101379fd9c8604%22%7D%7D"
+                      target="_blank"
+                      >Go to RCSB Page</a
+                    >
+                  </h3>
+                </div>
+
+                <a class="prev" onclick="prevSlide()">&#10094;</a>
+                <a class="next" onclick="nextSlide()">&#10095;</a>
+              </div>
+            </div>
           </div>
 
-          <div class="headline-wrapper">
-            <div class="col headline">
-              <div class="mySlideDiv fade active">
-                <h1>Update Date : 2023.05.04</h1>
-                <div class="row recently-rcsb"></div>
-              </div>
-              <div class="mySlideDiv fade">
-                <h1>Key Target Protein</h1>
-              </div>
-              <div class="mySlideDiv fade">
-                <h1>Syntekabio</h1>
-                <h3>AI Drug Development & Discovery</h3>
-              </div>
-              <div class="mySlideDiv fade">
-                <h1>Last 7 days Homo sapiens Protein Structure</h1>
-                <h3>
-                  <a
-                    href="https://www.rcsb.org/search?request=%7B%22query%22%3A%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22group%22%2C%22nodes%22%3A%5B%7B%22type%22%3A%22terminal%22%2C%22service%22%3A%22text%22%2C%22parameters%22%3A%7B%22attribute%22%3A%22rcsb_accession_info.initial_release_date%22%2C%22operator%22%3A%22range%22%2C%22value%22%3A%7B%22from%22%3A%22now-1w%22%2C%22include_lower%22%3Afalse%2C%22to%22%3A%22now%22%2C%22include_upper%22%3Atrue%7D%7D%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%5D%2C%22logical_operator%22%3A%22and%22%2C%22label%22%3A%22text%22%7D%5D%2C%22logical_operator%22%3A%22and%22%7D%2C%22return_type%22%3A%22entry%22%2C%22request_options%22%3A%7B%22paginate%22%3A%7B%22start%22%3A0%2C%22rows%22%3A25%7D%2C%22results_content_type%22%3A%5B%22experimental%22%5D%2C%22sort%22%3A%5B%7B%22sort_by%22%3A%22score%22%2C%22direction%22%3A%22desc%22%7D%5D%2C%22scoring_strategy%22%3A%22combined%22%7D%2C%22request_info%22%3A%7B%22query_id%22%3A%22977c3429d9b3b7e7c3101379fd9c8604%22%7D%7D"
-                    target="_blank"
-                    >Go to RCSB Page</a
-                  >
-                </h3>
-              </div>
-
-              <a class="prev" onclick="prevSlide()">&#10094;</a>
-              <a class="next" onclick="nextSlide()">&#10095;</a>
-            </div>
+          <div class="row stb">
+            <a href="https://www.syntekabio.com/" target="_blank"
+              ><img id="stb-home" src="../../img/STB_logo_white.png" alt=""
+            /></a>
+            <a href="https://cloud.syntekabio.com/main" target="_blank"
+              ><img id="stb-cloud" src="../../img/STB-Cloud_logo.png" alt=""
+            /></a>
+            <a href="https://www.rcsb.org/" target="_blank"
+              ><img id="stb-rcsb" src="../../img/rcsb_logo.png" alt=""
+            /></a>
+            <a href="https://www.uniprot.org/" target="_blank"
+              ><img id="stb-uniprot" src="../../img/uniprot_logo.png" alt=""
+            /></a>
           </div>
         </div>
       </div>
@@ -193,9 +215,7 @@
                 </div> -->
                 </div>
                 <div class="bottom">
-                  <p>
-                    필요 문구 및 설명 입력 예정
-                  </p>
+                  <p>필요 문구 및 설명 입력 예정</p>
                 </div>
               </div>
             </div>
@@ -210,7 +230,7 @@
             <div class="row popup-header">
               <div class="popup-title"></div>
               <div class="popup-close">
-                <img src="../img/exit_grey.png" alt="" />
+                <img src="../../img/exit_grey.png" alt="" />
               </div>
             </div>
             <div class="popup-body">
@@ -233,10 +253,10 @@
               <h1>Model Information</h1>
               <div class="row download">
                 <a id="goRCSB" href="" target="_blank"
-                  ><img src="../img/rcsb_logo.png" alt=""
+                  ><img src="../../img/rcsb_logo.png" alt=""
                 /></a>
                 <a id="goUniprot" href="" target="_blank"
-                  ><img src="../img/uniprot_logo.png" alt=""
+                  ><img src="../../img/uniprot_logo.png" alt=""
                 /></a>
                 <a id="getPDB" href="" download="" target="_blank"
                   >download PDB</a
@@ -322,25 +342,96 @@
           <div class="title-3">
             <h1>RCSB Released Data</h1>
           </div>
-          <div class="row chart-wrapper">
-            <div class="chart-1-wrapper">
-              <canvas id="chart-1"></canvas>
+          <div class="col rrd-text">
+            <div class="row rrd-text-wrapper">
+              <div class="rrd-text">
+                <h3>Process</h3>
+                <p>
+                  1. RCSB에 매일 업데이트 되는 구조를 Protein, Homo Sapiens
+                  기준으로 확인 및 정리
+                  <br />
+                  <br />
+                  2. 업데이트되는 데이터를 월별로 1700T 중복, ligand 결합 등을
+                  확인
+                  <br />
+                  <br />
+                  3. 정리된 자료들을 도식화 및 데이터베이스 생성
+                </p>
+              </div>
+              <div class="chart-1-wrapper">
+                <canvas id="chart-1"></canvas>
+              </div>
             </div>
-            <div class="chart-2-wrapper">
-              <canvas></canvas>
-            </div>
-            <div class="chart-3-wrapper">
-              <canvas></canvas>
+            <div class="col rrd-data">
+              <h2>Data Table</h2>
+              <table id="rrd-data-col">
+                <thead>
+                  <tr>
+                    <th>PDB</th>
+                    <th>Uniprot ID</th>
+                    <th>Protein</th>
+                    <th>Ligand</th>
+                    <th>Ligand MW</th>
+                  </tr>
+                </thead>
+              </table>
+              <table id="rrd-data-data">
+                <tbody>
+                  <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                  </tr>
+                  <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                  </tr>
+                  <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                  </tr>
+                  <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                  </tr>
+                  <tr>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                    <td>data</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </div>
-      <div class="section">4</div>
-      <div class="section">5</div>
+      <div class="section">
+        <div class="page-4"></div>
+      </div>
+      <!-- <div class="section">
+        <div class="page-5"></div>
+      </div> -->
     </div>
   </body>
+  <!-- jquery -->
   <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <!-- chart js -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- drag -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
   <script src="../js/news_scroll.js"></script>
   <script></script>
 </html>

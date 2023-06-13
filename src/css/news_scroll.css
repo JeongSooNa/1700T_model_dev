@@ -117,8 +117,9 @@ video {
 /* headline slide */
 .headline-wrapper {
   width: 100%;
-  bottom: 0;
+  /* bottom: 0; */
   position: absolute;
+  bottom: -100px;
 }
 .headline {
   z-index: 2;
@@ -137,11 +138,15 @@ video {
 
 /* Slides */
 .mySlideDiv h1 {
+  font-size: 25px;
   margin-top: 10px;
+  font-weight: 900;
 }
 .mySlideDiv a {
+  font-size: 15px;
+  font-weight: 300;
   /* color: rgb(50, 80, 180); */
-  color: white;
+  color: rgb(245, 245, 255);
   text-decoration-line: none;
 }
 .fade {
@@ -184,18 +189,48 @@ video {
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+/* stb */
+.stb{
+  width: 100%;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 0;
+}
+.stb img{
+  cursor: pointer;
+}
+#stb-home{
+  bottom: 0;
+  width: 150px;
+  height: 30px;
+  margin-top: 40px;
+}
+#stb-cloud{
+  width: 200px;
+  margin-top: 20px;
+}
+#stb-rcsb{
+  width: 80px;
+  height: 40px;
+  margin-top: 40px;
+}
+#stb-uniprot{
+  width: 100px;
+  height: 50px;
+  margin-top: 30px;
+}
+
 
 /* ************************************** */
 /* Page 2 */
@@ -590,25 +625,96 @@ video {
     black
   )
 }
+
+.rrd-text-wrapper{
+  justify-content: space-around;
+}
+.rrd-text h3{
+  margin: 30px 0;
+  text-align: center;
+}
+
 .title-3{
   text-align: center;
   margin-bottom: 50px;
 }
-.chart-wrapper{
-  justify-content: space-around;
-}
 .chart-1-wrapper{
-  width: 30%;
-  height: 400px;
+  width: 400px;
+  height: 200px;
   /* background-color: white; */
 }
-.chart-2-wrapper{
-  width: 30%; 
-  height: 400px;
-  background-color: white;
+
+/* data table */
+.rrd-data{
+  margin: 30px auto;
+  width: 80%;
+  height: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 10px;
 }
-.chart-3-wrapper{
-  width: 30%; 
-  height: 400px;
-  background-color: white;
+.rrd-data h2{
+  margin-bottom: 5px;
+  text-align: center;
+}
+.rrd-data th{
+  table-layout: fixed;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.rrd-data td{
+  /* border: 1px solid white; */
+  table-layout: fixed;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
+}
+#rrd-data-col table{
+  width: 100%;
+}
+#rrd-data-col table th{
+  width: 20%;
+}
+#rrd-data-data table{
+  width: 100%;
+}
+#rrd-data-data table td{
+  width: 20%;
+}
+
+
+/* ************************************** */
+/* Page 4 */
+.page-4 {
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  position: absolute;
+  color: white;
+  /* font-family: "Quicksand", sans-serif; */
+  font-family: 'Gothic A1', sans-serif;
+  /* background: linear-gradient(45deg, rgb(37, 39, 46), rgb(140, 140, 158), rgb(13, 18, 44)); */
+  background: radial-gradient(
+    circle at 50% 60%,
+    black,
+    rgba(11, 39, 65, 1) 60%,
+    black
+  )
+}
+
+
+/* ************************************** */
+/* Page 5 */
+.page-5 {
+  width: 100%;
+  height: 100vh;
+  padding-top: 100px;
+  position: absolute;
+  color: white;
+  /* font-family: "Quicksand", sans-serif; */
+  font-family: 'Gothic A1', sans-serif;
+  /* background: linear-gradient(45deg, rgb(37, 39, 46), rgb(140, 140, 158), rgb(13, 18, 44)); */
+  background: radial-gradient(
+    circle at 50% 60%,
+    black,
+    rgba(11, 39, 65, 1) 60%,
+    black
+  )
 }
