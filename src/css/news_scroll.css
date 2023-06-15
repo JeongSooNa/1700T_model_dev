@@ -644,6 +644,19 @@ video {
   /* background-color: white; */
 }
 
+/* effect */
+.effect{
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.1);
+  justify-content: space-around;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 /* data table */
 .rrd-data{
   margin: 30px auto;
@@ -672,11 +685,29 @@ video {
 #rrd-data-col table th{
   width: 20%;
 }
-#rrd-data-data table{
+#rrd-data-data{
   width: 100%;
 }
-#rrd-data-data table td{
+#rrd-data-data td{
   width: 20%;
+}
+/* scroll */
+.rrd-table-wrapper{
+  overflow: auto;
+  margin-right: 5px;
+}
+.rrd-table-wrapper::-webkit-scrollbar {
+  width: 10px;
+}
+.rrd-table-wrapper::-webkit-scrollbar-thumb {
+  height: 10%;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+.rrd-table-wrapper::-webkit-scrollbar-track {
+  border: 5px solid rgba(255, 255, 255, 0);
+  /* background: rgba(255, 255, 255, 0.1); */
 }
 
 
@@ -698,7 +729,48 @@ video {
     black
   )
 }
+.title-4{
+  text-align: center;
+  margin-bottom: 20px;
+}
+.chart-per-month-wrapper{
+  justify-content: space-around;
+}
+.chart-per-month-chart{
+  width: 40%;
+  height: 400px;
+  background-color: white;
+}
+.chart-per-month-option{
+  width: 40%;
+  height: 400px;
+  /* background-color: blue; */
+}
+.choose-month{
+  width: 100%;
+  justify-content: space-around;
+}
+.choose-month input{
+  width: 15%;
+  height: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.chart-per-month-option input{
+  margin: 10px auto;
+  width: 100%;
+  height: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
+
+.data-download-wrapper{
+  width: 90%;
+  height: 300px;
+  /* background-color: white; */
+  margin: 10px auto;
+}
 
 /* ************************************** */
 /* Page 5 */
