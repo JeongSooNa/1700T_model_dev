@@ -498,3 +498,13 @@ var lineChart = new Chart(ctx1, {
 //     },
 //   },
 // });
+
+
+// ############# RCSB Released Data #################
+// Read csv file
+// $.ajax({
+//   // url: "C:\Users\jsna\Desktop\RCSB_Release date_20230524_jeheo.xlsx",
+//   url: "https://raw.githubusercontent.com/JeongSooNa/1700T_model_dev/main/data/1700T_raw_final.csv",
+//   dataType: "text",
+// }).done(successFunction);
+// ########################################
