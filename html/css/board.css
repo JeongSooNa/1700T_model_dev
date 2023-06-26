@@ -45,6 +45,8 @@ video {
 #home-img {
   position: absolute;
   width: 200px;
+  cursor: pointer;
+  z-index: 5;
 }
 .text-container {
   padding-inline: clamp(1rem, 5vmin, 2rem);

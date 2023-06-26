@@ -77,7 +77,7 @@ $("#TypeMutant").click(function () {
 
 // Read csv file
 $.ajax({
-  url: "https://raw.githubusercontent.com/JeongSooNa/1700T_model_dev/main/data/1700T_raw_final.csv",
+  url: "https://raw.githubusercontent.com/JeongSooNa/1700T_model_dev/main/html/data/1700T_raw_final.csv",
   dataType: "text",
 }).done(successFunction);
 //   console.log(data);
