@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/news.css" />
+    <title>RCSB Released Data</title>
+  </head>
+  <body>
+    <div class="col container">
+      <a href="index.html">
+        <img src="img/ModelOfDeepMatcher_logo.png" alt="" id="home-img" />
+      </a>
+      <div class="video">
+        <video muted autoplay loop>
+          <source src="img/connection_-_113367 (1080p).mp4" type="video/mp4" />
+          <strong>Your browser does not support the video tag.</strong>
+        </video>
+      </div>
+      <div class="title">
+        <h1>RCSB Released Data</h1>
+      </div>
+      <div class="col rrd-text">
+        <div class="row rrd-text-wrapper">
+          <div class="rrd-text">
+            <h3>Process</h3>
+            <p>
+              1. RCSB에 매일 업데이트 되는 구조를 Protein, Homo Sapiens 기준으로
+              확인 및 정리
+              <br />
+              <br />
+              2. 업데이트되는 데이터를 월별로 1700T 중복, ligand 결합 등을 확인
+              <br />
+              <br />
+              3. 정리된 자료들을 도식화 및 데이터베이스 생성
+            </p>
+          </div>
+          <div class="chart-1-wrapper">
+            <canvas id="chart-1"></canvas>
+          </div>
+        </div>
+        <div class="row effect">
+          <div class="effect-add">
+            <h2>ADD Team</h2>
+            <p>
+              <br />
+              RCSB 업데이트 자료로 1700T에 포함되지 않았던 화합물 구조 확보
+              <br /><br />
+              DeepMatcher의 스크리닝 대상 확장
+              <br />
+              구조의 Action mode 확인을 통해 적합한 모델 생성
+            </p>
+          </div>
+          <div class="effect-adsp">
+            <h2>ADSP Team</h2>
+            <p>
+              <br />
+              최근 RCSB 업데이트 구조 확인
+              <br /><br />
+              연구 트렌드 파악 및 빠른 연구 개발 가능
+            </p>
+          </div>
+        </div>
+        <div class="col rrd-data">
+          <h2>Data Table</h2>
+          <table id="rrd-data-col">
+            <thead>
+              <tr>
+                <th>PDB</th>
+                <th>Gene Name</th>
+                <th>Mutatant Type</th>
+                <th>Uniprot ID</th>
+                <th>Ligand</th>
+                <th>Ligand MW</th>
+              </tr>
+            </thead>
+          </table>
+          <div class="rrd-table-wrapper">
+            <table id="rrd-data-data">
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- JQuery -->
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"
+  ></script>
+  <!-- chart js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Javascript -->
+  <script type="text/javascript" src="js/news.js"></script>
+</html>
