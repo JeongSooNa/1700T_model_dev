@@ -6,7 +6,7 @@ $(function () {
 setTimeout(function () {
   $(".main").css("display", "block");
   $(".loading").css("display", "none");
-}, 1000); // loading time setting
+}, 3000); // loading time setting
 
 // Hide option
 $("#hide").click(function () {

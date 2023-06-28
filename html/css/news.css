@@ -85,12 +85,12 @@ video {
   text-align: center;
   overflow: hidden;
 }
-.process h3{
-    font-size: 17px;
+.process h3 {
+  font-size: 17px;
 }
-.process h5{
-    font-size: 10px;
-    font-weight: 100;
+.process h5 {
+  font-size: 10px;
+  font-weight: 100;
 }
 .process:hover {
   width: 500px;
@@ -106,15 +106,15 @@ video {
   border: none;
 }
 .process:hover .process-hide {
-    display: block;
+  display: block;
 }
 .process-hide {
-    display: none;
+  display: none;
 }
-.process-hide p{
-    margin-top: 10px;
-    font-size: 10px;
-    line-height: 25px;
+.process-hide p {
+  margin-top: 10px;
+  font-size: 10px;
+  line-height: 25px;
 }
 
 .title {
@@ -163,8 +163,8 @@ video {
 /* data table */
 .rrd-data {
   margin: 30px auto;
-  width: 80%;
-  height: 300px;
+  width: 95%;
+  height: 30vh;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 10px;
@@ -211,4 +211,134 @@ video {
 .rrd-table-wrapper::-webkit-scrollbar-track {
   border: 5px solid rgba(255, 255, 255, 0);
   /* background: rgba(255, 255, 255, 0.1); */
+}
+
+.service-wrapper {
+  width: 95%;
+  height: 20vh;
+  margin: 0 auto;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  /* justify-content: space-between; */
+  padding: 10px;
+  text-transform: uppercase;
+  font-family: Lato;
+  line-height: 1.6em;
+  letter-spacing: 0.1em;
+}
+.service {
+  width: 45%;
+  height: 100%;
+}
+.down {
+  width: 240px;
+  height: 40px;
+  /* justify-content: space-between; */
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(59, 87, 121, 0.4) 100%
+  );
+  padding: 5px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.down h3 {
+  padding: 2px;
+  font-size: 13px;
+  font-weight: 500;
+}
+.down span {
+  margin: 3px;
+  font-size: 10px;
+  margin-left: 10px;
+}
+.down:hover {
+  width: 500px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(59, 87, 121, 0.4) 100%
+  );
+  border: none;
+}
+.down:hover .down-hide {
+  display: block;
+}
+.down-hide {
+  margin-left: 40px;
+  display: none;
+}
+.down-hide a {
+  text-decoration: none;
+  color: white;
+  font-size: 7px;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 2px;
+}
+.down-hide select {
+  width: 120px;
+  /* margin-left: 100px; */
+}
+.down-hide select option:nth-child(1){
+  text-align: center;
+}
+.down-hide select option:nth-child(n+2){
+  text-align: right;
+}
+
+.something {
+  width: 240px;
+  height: 40px;
+  /* justify-content: space-between; */
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(59, 87, 121, 0.4) 100%
+  );
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.something a {
+  height: 30px;
+  padding: 2px;
+  /* border: 1px solid white;
+  border-radius: 10px; */
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+}
+.something span {
+  margin: 3px;
+  font-size: 10px;
+  margin-left: 10px;
+}
+.something:hover {
+  width: 500px;
+  cursor: pointer;
+  border-radius: 5px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(59, 87, 121, 0.4) 100%
+  );
+  border: none;
+}
+.something:hover .something-hide {
+  display: block;
+}
+.something-hide {
+  display: none;
+}
+.something-hide input {
+  margin-left: 30px;
+  margin-top: 18px;
 }
