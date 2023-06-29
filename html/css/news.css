@@ -76,12 +76,12 @@ video {
   margin: 0 auto;
   cursor: pointer;
   border-radius: 5px;
+  border: 1px solid white;
   background: radial-gradient(
     circle,
     rgba(0, 0, 0, 0.4) 0%,
     rgba(59, 87, 121, 0.4) 100%
   );
-  border: none;
   text-align: center;
   overflow: hidden;
 }
@@ -98,12 +98,12 @@ video {
   margin: 0 auto;
   cursor: pointer;
   border-radius: 5px;
+  border: 1px solid white;
   background: radial-gradient(
     circle,
     rgba(0, 0, 0, 0.4) 0%,
     rgba(59, 87, 121, 0.4) 100%
   );
-  border: none;
 }
 .process:hover .process-hide {
   display: block;
@@ -220,12 +220,12 @@ video {
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  /* justify-content: space-between; */
-  padding: 10px;
+  justify-content: space-around;
   text-transform: uppercase;
   font-family: Lato;
   line-height: 1.6em;
   letter-spacing: 0.1em;
+  padding: 10px 0;
 }
 .service {
   width: 45%;
@@ -242,6 +242,7 @@ video {
   );
   padding: 5px;
   margin-bottom: 10px;
+  border: 1px solid white;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -264,7 +265,7 @@ video {
     rgba(0, 0, 0, 0.4) 0%,
     rgba(59, 87, 121, 0.4) 100%
   );
-  border: none;
+  border: 1px solid white;
 }
 .down:hover .down-hide {
   display: block;
@@ -285,10 +286,10 @@ video {
   width: 120px;
   /* margin-left: 100px; */
 }
-.down-hide select option:nth-child(1){
+.down-hide select option:nth-child(1) {
   text-align: center;
 }
-.down-hide select option:nth-child(n+2){
+.down-hide select option:nth-child(n + 2) {
   text-align: right;
 }
 
@@ -296,6 +297,7 @@ video {
   width: 240px;
   height: 40px;
   /* justify-content: space-between; */
+  border: 1px solid white;
   background: radial-gradient(
     circle,
     rgba(0, 0, 0, 0.4) 0%,
@@ -330,7 +332,7 @@ video {
     rgba(0, 0, 0, 0.4) 0%,
     rgba(59, 87, 121, 0.4) 100%
   );
-  border: none;
+  border: 1px solid white;
 }
 .something:hover .something-hide {
   display: block;
@@ -341,4 +343,15 @@ video {
 .something-hide input {
   margin-left: 30px;
   margin-top: 18px;
+}
+
+.chart-section{
+  width: 25%;
+  height: 100%;
+  background-color: black;
+}
+.other-section{
+  width: 25%;
+  height: 100%;
+  background-color: black;
 }
