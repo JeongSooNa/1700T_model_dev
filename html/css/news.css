@@ -175,24 +175,24 @@ video {
 }
 .rrd-data th {
   table-layout: fixed;
+  width: 16%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .rrd-data td {
   /* border: 1px solid white; */
   table-layout: fixed;
+  width: 16%;
   border-bottom: 1px dashed rgba(255, 255, 255, 0.5);
 }
 #rrd-data-col table {
   width: 100%;
 }
-#rrd-data-col table th {
-  width: 20%;
-}
 #rrd-data-data {
   width: 100%;
 }
 #rrd-data-data td {
-  width: 20%;
+  font-size: 3px;
+  text-align: center;
 }
 /* scroll */
 .rrd-table-wrapper {
