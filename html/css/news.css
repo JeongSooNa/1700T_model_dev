@@ -231,6 +231,13 @@ video {
   width: 45%;
   height: 100%;
 }
+#select-data {
+  color: white;
+  background-color: rgba(59, 87, 121, 0.4)
+}
+#select-data option{
+  background-color: rgba(59, 87, 121, 0.4)
+}
 .down {
   width: 240px;
   height: 40px;
@@ -345,12 +352,12 @@ video {
   margin-top: 18px;
 }
 
-.chart-section{
+.chart-section {
   width: 25%;
   height: 100%;
   background-color: black;
 }
-.other-section{
+.other-section {
   width: 25%;
   height: 100%;
   background-color: black;
