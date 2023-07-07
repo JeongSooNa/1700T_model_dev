@@ -51,3 +51,12 @@ var lineChart = new Chart(ctx1, {
   data: speedData,
   options: chartOptions,
 });
+
+
+
+
+// Load RCSB released csv data
+$.ajax({
+  url: "https://raw.githubusercontent.com/JeongSooNa/1700T_model_dev/main/html/data/1700T_raw_final.csv",
+  dataType: "text",
+}).done(successFunction);
