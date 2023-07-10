@@ -125,3 +125,11 @@ function successFunction(data){
   }
   loadTable();
 }
+
+
+
+// Q&A click function
+function QnAOpenPopup(){
+  $('.QnA-popup').show('slow');
+  $('.QnA-popup').css("overflow" , "auto");
+}
