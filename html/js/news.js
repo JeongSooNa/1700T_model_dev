@@ -1,7 +1,7 @@
-const ctx1 = document.getElementById("chart-1");
+const ctx1 = document.getElementById("main-chart");
 var dataFirst = {
   label: "Number of PDB",
-  data: [314, 417, 486, 362, 119],
+  data: [314, 417, 486, 362, 483, 597],
   lineTension: 0,
   fill: false,
   // borderColor: "rgb(100, 200, 255)",
@@ -10,18 +10,18 @@ var dataFirst = {
 
 var dataSecond = {
   label: "Number of Gene",
-  data: [205, 317, 372, 357, 97],
+  data: [205, 317, 372, 357, 567, 486],
   lineTension: 0,
   fill: false,
   borderColor: "rgb(180, 280, 255)",
 };
 
 var speedData = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "May"],
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
   datasets: [dataFirst, dataSecond],
 };
 
-var chartOptions = {
+var mainChartOptions = {
   plugins: {
     title: {
       display: true,
@@ -49,11 +49,8 @@ var chartOptions = {
 var lineChart = new Chart(ctx1, {
   type: "line",
   data: speedData,
-  options: chartOptions,
+  options: mainChartOptions,
 });
-
-
-
 
 // Load RCSB released csv data
 $.ajax({
@@ -88,7 +85,7 @@ $.ajax({
   23. LigandSMILES
   24. NonPolymerEntityID
 */
-function successFunction(data){
+function successFunction(data) {
   // console.log("Load Data Complete!")
   // console.log(data)
   var colList = data.split("\n");
@@ -104,7 +101,6 @@ function successFunction(data){
     // load data
     var html = "";
     for (var i = 1; i < 100; i++) {
-
       // append table content
       html +=
         "<tr><td>" +
@@ -126,10 +122,42 @@ function successFunction(data){
   loadTable();
 }
 
-
-
 // Q&A click function
-function QnAOpenPopup(){
-  $('.QnA-popup').show('slow');
-  $('.QnA-popup').css("overflow" , "auto");
+function QnAOpenPopup() {
+  $(".QnA-popup").show();
+  $(".QnA-hide").show();
+  $(".QnA").css({
+    width: "500px",
+    overflow: "visible",
+    "border-radius": "5px",
+  });
 }
+function QnAOpenPopupClose() {
+  $(".QnA-popup").hide();
+  $(".QnA-hide").hide();
+  $(".QnA").css({
+    width: "240px",
+    overflow: "hidden",
+    "border-radius": "5px",
+  });
+}
+
+// Chart Section
+const mixedChart = new Chart(ctx, {
+  data: {
+    datasets: [
+      {
+        type: "bar",
+        label: "Bar Dataset",
+        data: [10, 20, 30, 40],
+      },
+      {
+        type: "line",
+        label: "Line Dataset",
+        data: [50, 50, 50, 50],
+      },
+    ],
+    labels: ["January", "February", "March", "April"],
+  },
+  options: options,
+});

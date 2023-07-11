@@ -24,7 +24,7 @@
   background: radial-gradient(
     circle at 50% 50%,
     black,
-    rgba(19, 131, 175, 0.3) 60%,
+    rgba(5, 32, 52, 0.7) 60%,
     black
   );
   background-position: center;
@@ -122,7 +122,7 @@ video {
   margin-top: 20px;
   margin-bottom: 50px;
 }
-.chart-1-wrapper {
+.main-chart-wrapper {
   width: 400px;
   height: 200px;
   margin-top: 50px;
@@ -366,6 +366,7 @@ video {
   background-color: black;
 }
 .QnA {
+  transition-duration: 0s;
   width: 240px;
   height: 40px;
   /* justify-content: space-between; */
@@ -379,7 +380,7 @@ video {
   border-radius: 10px;
   cursor: pointer;
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .QnA a {
   /* width: 100%; */
@@ -390,26 +391,20 @@ video {
   font-size: 13px;
   /* text-align: center; */
 }
-.QnA:hover {
+/* .QnA:hover {
   width: 500px;
   cursor: pointer;
   border-radius: 5px;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(59, 87, 121, 0.4) 100%
-  );
-  border: 1px solid white;
-}
-.QnA:hover .QnA-hide {
+} */
+/* .QnA:hover .QnA-hide {
   display: block;
-}
+} */
 .QnA-hide {
   display: none;
 }
 .QnA-hide p{
-  font-size: 5px;
-  margin-left: 50px;
+  font-size: 3px;
+  margin-left: 30px;
 }
 .QnA-popup{
   display: none;
@@ -417,9 +412,45 @@ video {
   width: 300px;
   height: 300px;
   background-color: black;
-  opacity: 0.7;
+  opacity: 0.8;
   border: 1px solid white;
   border-radius: 10px;
   z-index: 3;
-  bottom: 0;
+  bottom: 40px;
+  /* left: 100px; */
+  right: 0;
+  cursor: auto;
+}
+.QnA span {
+  margin: 2px;
+  font-size: 8px;
+  margin-left: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0 1px;
+  border-radius: 10px;
+}
+.QnA-popup-close{
+  margin-left: 280px;
+  margin-top: 5px;
+  background-color: red;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 2;
+}
+.QnA-popup-input{
+  width: 90%;
+  height: 80%;
+  margin: 5px auto;
+  color: black;
+}
+.QnA-popup-input textarea{
+  width: 100%;
+  height: 100%;
+}
+#QnA-popup-submit{
+  width: 100px;
+  margin-left: 100px;
+  border-radius: 5px;
 }
