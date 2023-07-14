@@ -397,6 +397,9 @@ video {
   /* background-color: black; */
   position: relative;
 }
+.chart-section h3{
+  text-align: center;
+}
 .other-section {
   width: 25%;
   height: 100%;
@@ -494,7 +497,7 @@ video {
 
 /* Chart */
 .open-chart{
-  width: 60%;
+  width: 100%;
   height: 25px;
   background: radial-gradient(
     circle,
@@ -505,9 +508,10 @@ video {
   border-radius: 10px;
   cursor: pointer;
   z-index: 1;
+  margin-bottom: 10px;
 }
 .open-chart p{
-  font-size: 13px;
+  font-size: 11px;
   letter-spacing: 4px;
   text-align: center;
 }
@@ -534,4 +538,84 @@ video {
   height: 15px;
   border-radius: 50%;
   z-index: 2;
+}
+.chart-2{
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  width: 600px;
+  height: 600px;
+}
+.chart-2 canvas{
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+}
+.chart2-close{
+  position: absolute;
+  margin: 5px;
+  right: 0;
+  background-color: red;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 2;
+}
+.chart-3{
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  width: 600px;
+  height: 600px;
+}
+.chart-3 canvas{
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+}
+.chart3-close{
+  position: absolute;
+  margin: 5px;
+  right: 0;
+  background-color: red;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 2;
+}
+.chart-4{
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  width: 600px;
+  height: 600px;
+}
+.chart-4 canvas{
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+}
+.chart4-close{
+  position: absolute;
+  margin: 5px;
+  right: 0;
+  background-color: red;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.other-section{
+  margin-right: 10px;
+}
+.other-section h5{
+  font-size: 5px;
+ text-align: right; 
 }

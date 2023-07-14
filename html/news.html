@@ -9,7 +9,7 @@
   <body>
     <div class="col container">
       <a href="index.html">
-        <img src="img/ModelOfDeepMatcher_logo.png" alt="" id="home-img" />
+        <img src="img/mod_logo.png" alt="" id="home-img" />
       </a>
       <div class="video">
         <video muted autoplay loop>
@@ -174,9 +174,39 @@
               <div class="chart1-close" onclick="Chart1Close()"></div>
               <canvas id="chart-1"></canvas>
             </div>
+            <!--  -->
+            <div class="chart-2-btn open-chart" onclick="openChart2()">
+              <p>Apo Protein 제외 PDB</p>
+            </div>
+            <div class="chart-2">
+              <div class="chart2-close" onclick="Chart2Close()"></div>
+              <canvas id="chart-2"></canvas>
+            </div>
+            <!--  -->
+            <div class="chart-3-btn open-chart" onclick="openChart3()">
+              <p>1700T에 없으나 Apo Protein인 PDB</p>
+            </div>
+            <div class="chart-3">
+              <div class="chart3-close" onclick="Chart3Close()"></div>
+              <canvas id="chart-3"></canvas>
+            </div>
+            <!--  -->
+            <div class="chart-4-btn open-chart" onclick="openChart4()">
+              <p>Family별 Update된 PDB</p>
+            </div>
+            <div class="chart-4">
+              <div class="chart4-close" onclick="Chart4Close()"></div>
+              <canvas id="chart-4"></canvas>
+            </div>
+            <!--  -->
           </div>
           <div class="col other-section">
-            <h1>Other section</h1>
+            <h5>syntekabio</h5>
+            <h5>ADSP</h5>
+            <h5>ai drug development operation team</h5>
+            <h5>1700T model validation</h5>
+            <h5>model of deepmatcher</h5>
+            <h5>JeongSoo Na</h5>
           </div>
         </div>
       </div>

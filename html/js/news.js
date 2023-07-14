@@ -124,8 +124,8 @@ function successFunction(data) {
 
 // Q&A click function
 function QnAOpenPopup() {
-  $(".QnA-popup").show();
-  $(".QnA-hide").show();
+  $(".QnA-popup").show(20);
+  $(".QnA-hide").show(20);
   $(".QnA").css({
     width: "500px",
     overflow: "visible",
@@ -133,8 +133,8 @@ function QnAOpenPopup() {
   });
 }
 function QnAOpenPopupClose() {
-  $(".QnA-popup").hide();
-  $(".QnA-hide").hide();
+  $(".QnA-popup").hide(20);
+  $(".QnA-hide").hide(20);
   $(".QnA").css({
     width: "240px",
     overflow: "hidden",
@@ -143,6 +143,7 @@ function QnAOpenPopupClose() {
 }
 
 // Chart Section
+// Chart 1
 const ctx1 = document.getElementById("chart-1");
 const mixedChart = new Chart(ctx1, {
   data: {
@@ -188,9 +189,169 @@ const mixedChart = new Chart(ctx1, {
     }
   }
 });
+// Chart 2
+const ctx2 = document.getElementById("chart-2");
+const mixedChart2 = new Chart(ctx2, {
+  data: {
+    datasets: [
+      {
+        type: "bar",
+        label: "Gene",
+        data: [107,161,146,125,233,162],
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      },
+    ],
+    labels: ["Jan", "Feb", "Mar", "Apr","May","Jun"],
+  },
+  options:{
+    plugins:{
+      title:{
+        display:true,
+        text: "Apo Protein 제외 PDB",
+        color:"white",
+      },
+      legend:{
+        display:false,
+        labels:{
+          color:"white",
+        }
+      }
+    },
+    scales: {
+      y: {
+        ticks: { color: 'white', beginAtZero: true }
+      },
+      x: {
+        ticks: { color: 'white', beginAtZero: true }
+      }
+    }
+  }
+});
+// Chart 3
+const ctx3 = document.getElementById("chart-3");
+const mixedChart3 = new Chart(ctx3, {
+  data: {
+    datasets: [
+      {
+        type: "line",
+        label: "wild type",
+        data: [63,65,99,89,38],
+        borderColor: '#FF6384',
+        // backgroundColor: '#9BD0F5',
+        // borderColor: 'rgb(54, 162, 235)'
+      },
+      {
+        type: "line",
+        label: "mutant type",
+        data: [42,42,42,28,7],
+        borderColor: '#FF9994',
+      },
+    ],
+    labels: ["Jan", "Feb", "Mar", "Apr","May","Jun"],
+  },
+  options:{
+    plugins:{
+      title:{
+        display:true,
+        text: "1700T에 없으나 Apo Protein인 PDB",
+        color:"white",
+      },
+      legend:{
+        display:true,
+        labels:{
+          color:"white",
+        }
+      }
+    },
+    scales: {
+      y: {
+        ticks: { color: 'white', beginAtZero: true }
+      },
+      x: {
+        ticks: { color: 'white', beginAtZero: true }
+      }
+    }
+  }
+});
+// Chart 4
+const ctx4 = document.getElementById("chart-4");
+const mixedChart4 = new Chart(ctx4, {
+  data: {
+    datasets: [
+      {
+        type: "bar",
+        data: [977,14,255,147,305],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(255, 159, 64, 0.2)',
+          'rgba(255, 205, 86, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          'rgba(54, 162, 235, 0.2)',
+          'rgba(153, 102, 255, 0.2)',
+          'rgba(201, 203, 207, 0.2)'
+        ],
+      },
+    ],
+    labels: ["Kinase","Methylase","Peptease","Protease","ect"],
+  },
+  options:{
+    plugins:{
+      title:{
+        display:true,
+        text: "1700T에 없으나 Apo Protein인 PDB",
+        color:"white",
+      },
+      legend:{
+        display:true,
+        labels:{
+          color:"white",
+        }
+      }
+    },
+    scales: {
+      y: {
+        ticks: { color: 'white', beginAtZero: true }
+      },
+      x: {
+        ticks: { color: 'white', beginAtZero: true }
+      }
+    }
+  }
+});
+// popup open, close
 function openChart1(){
-  $(".chart-1").show();
+  $(".chart-1").show(10);
+  $(".chart-2").hide(10);
+  $(".chart-3").hide(10);
+  $(".chart-4").hide(10);
+}
+function openChart2(){
+  $(".chart-2").show(10);
+  $(".chart-1").hide(10);
+  $(".chart-3").hide(10);
+  $(".chart-4").hide(10);
+}
+function openChart3(){
+  $(".chart-3").show(10);
+  $(".chart-1").hide(10);
+  $(".chart-2").hide(10);
+  $(".chart-4").hide(10);
+}
+function openChart4(){
+  $(".chart-4").show(10);
+  $(".chart-1").hide(10);
+  $(".chart-2").hide(10);
+  $(".chart-3").hide(10);
 }
 function Chart1Close(){
   $(".chart-1").hide();
+}
+function Chart2Close(){
+  $(".chart-2").hide();
+}
+function Chart3Close(){
+  $(".chart-3").hide();
+}
+function Chart4Close(){
+  $(".chart-4").hide();
 }

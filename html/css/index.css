@@ -68,7 +68,7 @@ video {
   border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 .summary-text {
-  padding: 20px;
+  padding: 10px;
   padding-top: 50px;
 }
 .summary-text h1 {
@@ -90,7 +90,7 @@ video {
   border-radius: 10px;
   margin-top: 20px;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 12px;
   text-transform: uppercase;
   font-family: Lato;
   line-height: 1.6em;
