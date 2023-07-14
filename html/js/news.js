@@ -1,4 +1,4 @@
-const ctx1 = document.getElementById("main-chart");
+const ctx = document.getElementById("main-chart");
 var dataFirst = {
   label: "Number of PDB",
   data: [314, 417, 486, 362, 483, 597],
@@ -46,7 +46,7 @@ var mainChartOptions = {
   },
 };
 
-var lineChart = new Chart(ctx1, {
+var lineChart = new Chart(ctx, {
   type: "line",
   data: speedData,
   options: mainChartOptions,
@@ -143,21 +143,54 @@ function QnAOpenPopupClose() {
 }
 
 // Chart Section
-const mixedChart = new Chart(ctx, {
+const ctx1 = document.getElementById("chart-1");
+const mixedChart = new Chart(ctx1, {
   data: {
     datasets: [
       {
-        type: "bar",
-        label: "Bar Dataset",
-        data: [10, 20, 30, 40],
+        type: "line",
+        label: "1700T 중복 Gene",
+        data: [65,71,84,87,82,85],
+        borderColor: '#FF6384',
+        // backgroundColor: '#9BD0F5',
+        // borderColor: 'rgb(54, 162, 235)'
       },
       {
-        type: "line",
-        label: "Line Dataset",
-        data: [50, 50, 50, 50],
+        type: "bar",
+        label: "Gene",
+        data: [205,317,372,357,567,486],
+        backgroundColor: 'rgba(255, 255, 255, 0.8)',
       },
     ],
-    labels: ["January", "February", "March", "April"],
+    labels: ["Jan", "Feb", "Mar", "Apr","May","Jun"],
   },
-  options: options,
+  options:{
+    plugins:{
+      title:{
+        display:true,
+        text: "1700T 중복 Gene",
+        color:"white",
+      },
+      legend:{
+        display:true,
+        labels:{
+          color:"white",
+        }
+      }
+    },
+    scales: {
+      y: {
+        ticks: { color: 'white', beginAtZero: true }
+      },
+      x: {
+        ticks: { color: 'white', beginAtZero: true }
+      }
+    }
+  }
 });
+function openChart1(){
+  $(".chart-1").show();
+}
+function Chart1Close(){
+  $(".chart-1").hide();
+}

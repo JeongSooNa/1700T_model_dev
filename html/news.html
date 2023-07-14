@@ -29,7 +29,8 @@
                 <h5>hover</h5>
                 <div class="process-hide">
                   <p>
-                    1. RCSB에 매일 업데이트 되는 구조를 Protein, Homo Sapiens 기준으로 확인 및 정리
+                    1. RCSB에 매일 업데이트 되는 구조를 Protein, Homo Sapiens
+                    기준으로 확인 및 정리
                     <br />
                     2. 업데이트되는 데이터를 월별로 1700T 중복, ligand 결합 등을
                     확인
@@ -43,9 +44,11 @@
                 <h5>hover</h5>
                 <div class="process-hide">
                   <p>
-                    1. RCSB 업데이트 자료로 1700T에 포합되지 않았던 화합물 구조 확보
+                    1. RCSB 업데이트 자료로 1700T에 포합되지 않았던 화합물 구조
+                    확보
                     <br />
-                    2. DeepMatcher의 스크리닝 대상 확장, 구조 확인을 통한 적합한 모델 생성
+                    2. DeepMatcher의 스크리닝 대상 확장, 구조 확인을 통한 적합한
+                    모델 생성
                   </p>
                 </div>
               </div>
@@ -133,30 +136,43 @@
               <a href="" download="">Somethig contents</a>
               <span>Hover</span>
               <div class="row something-hide">
-                <input type="checkbox"><span>1</span>
-                <input type="checkbox"><span>2</span>
-                <input type="checkbox"><span>3</span>
+                <input type="checkbox" /><span>1</span>
+                <input type="checkbox" /><span>2</span>
+                <input type="checkbox" /><span>3</span>
               </div>
             </div>
             <div class="row QnA">
-              <a href="" download="">Q & A</a>
+              <a href="">Q & A</a>
               <span onclick="QnAOpenPopup()">Click</span>
               <div class="row QnA-hide">
                 <p>You can request inquiries about RCSB Released Data.</p>
               </div>
               <div class="col QnA-popup">
-                <div class="QnA-popup-close" onclick="QnAOpenPopupClose()"></div> 
+                <div
+                  class="QnA-popup-close"
+                  onclick="QnAOpenPopupClose()"
+                ></div>
                 <div class="QnA-popup-input">
-                  <textarea name="" id="" cols="30" rows="10" wrap="physical"></textarea>
+                  <textarea
+                    name=""
+                    id=""
+                    cols="30"
+                    rows="10"
+                    wrap="physical"
+                  ></textarea>
                 </div>
-                <input id="QnA-popup-submit" type="button" value="submit">
+                <input id="QnA-popup-submit" type="button" value="submit" />
               </div>
             </div>
           </div>
           <div class="col chart-section">
-            <h1>Chart section</h1>
+            <h3>Chart View</h3>
+            <div class="chart-1-btn open-chart" onclick="openChart1()">
+              <p>1700T 중복 Gene</p>
+            </div>
             <div class="chart-1">
-              
+              <div class="chart1-close" onclick="Chart1Close()"></div>
+              <canvas id="chart-1"></canvas>
             </div>
           </div>
           <div class="col other-section">

@@ -267,6 +267,7 @@ video {
 .service {
   width: 45%;
   height: 100%;
+  margin-left: 10px;
 }
 #select-data {
   color: white;
@@ -391,14 +392,15 @@ video {
 }
 
 .chart-section {
-  width: 25%;
+  width: 30%;
   height: 100%;
-  background-color: black;
+  /* background-color: black; */
+  position: relative;
 }
 .other-section {
   width: 25%;
   height: 100%;
-  background-color: black;
+  /* background-color: black; */
 }
 .QnA {
   transition-duration: 0s;
@@ -488,4 +490,48 @@ video {
   width: 100px;
   margin-left: 100px;
   border-radius: 5px;
+}
+
+/* Chart */
+.open-chart{
+  width: 60%;
+  height: 25px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(59, 87, 121, 0.4) 100%
+  );
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+.open-chart p{
+  font-size: 13px;
+  letter-spacing: 4px;
+  text-align: center;
+}
+.chart-1{
+  display: none;
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  width: 600px;
+  height: 600px;
+}
+.chart-1 canvas{
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  padding: 20px;
+}
+.chart1-close{
+  position: absolute;
+  margin: 5px;
+  right: 0;
+  background-color: red;
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  z-index: 2;
 }
