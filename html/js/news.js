@@ -141,6 +141,17 @@ function QnAOpenPopupClose() {
     "border-radius": "5px",
   });
 }
+function submit(){
+  //
+
+  var confirmFlag = confirm("Q&A를 등록하시겠습니까?")
+  if(confirmFlag){
+    alert("등록 완료")
+  }
+  else{
+    
+  }
+}
 
 // Chart Section
 // Chart 1
@@ -207,57 +218,11 @@ const mixedChart2 = new Chart(ctx2, {
     plugins:{
       title:{
         display:true,
-        text: "Apo Protein 제외 PDB",
+        text: "1700T 미중복 Apo Protein 제외 PDB",
         color:"white",
       },
       legend:{
         display:false,
-        labels:{
-          color:"white",
-        }
-      }
-    },
-    scales: {
-      y: {
-        ticks: { color: 'white', beginAtZero: true }
-      },
-      x: {
-        ticks: { color: 'white', beginAtZero: true }
-      }
-    }
-  }
-});
-// Chart 3
-const ctx3 = document.getElementById("chart-3");
-const mixedChart3 = new Chart(ctx3, {
-  data: {
-    datasets: [
-      {
-        type: "line",
-        label: "wild type",
-        data: [63,65,99,89,38],
-        borderColor: '#FF6384',
-        // backgroundColor: '#9BD0F5',
-        // borderColor: 'rgb(54, 162, 235)'
-      },
-      {
-        type: "line",
-        label: "mutant type",
-        data: [42,42,42,28,7],
-        borderColor: '#FF9994',
-      },
-    ],
-    labels: ["Jan", "Feb", "Mar", "Apr","May","Jun"],
-  },
-  options:{
-    plugins:{
-      title:{
-        display:true,
-        text: "1700T에 없으나 Apo Protein인 PDB",
-        color:"white",
-      },
-      legend:{
-        display:true,
         labels:{
           color:"white",
         }
@@ -282,13 +247,13 @@ const mixedChart4 = new Chart(ctx4, {
         type: "bar",
         data: [977,14,255,147,305],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.2)',
-          'rgba(255, 159, 64, 0.2)',
-          'rgba(255, 205, 86, 0.2)',
-          'rgba(75, 192, 192, 0.2)',
-          'rgba(54, 162, 235, 0.2)',
-          'rgba(153, 102, 255, 0.2)',
-          'rgba(201, 203, 207, 0.2)'
+          'rgba(255, 99, 132, 0.5)',
+          'rgba(255, 159, 64, 0.5)',
+          'rgba(255, 205, 86, 0.5)',
+          'rgba(75, 192, 192, 0.5)',
+          'rgba(54, 162, 235, 0.5)',
+          'rgba(153, 102, 255, 0.5)',
+          'rgba(201, 203, 207, 0.5)'
         ],
       },
     ],
@@ -298,11 +263,11 @@ const mixedChart4 = new Chart(ctx4, {
     plugins:{
       title:{
         display:true,
-        text: "1700T에 없으나 Apo Protein인 PDB",
+        text: "Family별 Update 된 PDB",
         color:"white",
       },
       legend:{
-        display:true,
+        display:false,
         labels:{
           color:"white",
         }

@@ -71,18 +71,18 @@ video {
   width: 60%;
 }
 .process {
-  width: 100px;
-  height: 50px;
-  margin: 0 auto;
-  cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid white;
+  width: 300px;
+  height: 40px;
+  /* justify-content: space-between; */
   background: radial-gradient(
     circle,
     rgba(0, 0, 0, 0.4) 0%,
     rgba(59, 87, 121, 0.4) 100%
   );
-  text-align: center;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
   overflow: hidden;
 }
 .process h3 {
@@ -94,27 +94,34 @@ video {
 }
 .process:hover {
   width: 500px;
-  height: 160px;
-  margin: 0 auto;
   cursor: pointer;
   border-radius: 5px;
-  border: 1px solid white;
   background: radial-gradient(
     circle,
     rgba(0, 0, 0, 0.4) 0%,
     rgba(59, 87, 121, 0.4) 100%
   );
+  border: 1px solid white;
 }
 .process:hover .process-hide {
   display: block;
 }
 .process-hide {
   display: none;
+  position: relative;
 }
-.process-hide p {
+.process-hide img {
+  margin-left: 10px;
+  width: 80px;
+  cursor: pointer;
+}
+/* .process-hide a:nth-child(1) img{
   margin-top: 10px;
+} */
+.process-hide p {
   font-size: 10px;
   line-height: 25px;
+  margin-left: 10px;
 }
 
 .title {
@@ -129,43 +136,11 @@ video {
   /* background-color: white; */
 }
 
-/* effect */
-.effect {
-  width: 100%;
-  height: 140px;
-  background-color: rgba(255, 255, 255, 0.1);
-  justify-content: space-around;
-  text-align: center;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 10px;
-  text-transform: uppercase;
-  font-family: Lato;
-  line-height: 16px;
-  letter-spacing: 0.1em;
-}
-.effect h2 {
-  font-size: 20px;
-  font-weight: 400;
-}
-.effect p {
-  font-size: 12px;
-  font-weight: 100;
-}
-.effect-add {
-  width: 50%;
-}
-.effect-adsp {
-  width: 50%;
-}
-
 /* data table */
 .rrd-data {
   margin: 30px auto;
   width: 95%;
-  height: 35vh;
+  height: 45vh;
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 10px;
@@ -179,22 +154,22 @@ video {
   table-layout: fixed;
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
-.rrd-data th:nth-child(1){
+.rrd-data th:nth-child(1) {
   width: 12%;
 }
-.rrd-data th:nth-child(2){
+.rrd-data th:nth-child(2) {
   width: 12%;
 }
-.rrd-data th:nth-child(3){
+.rrd-data th:nth-child(3) {
   width: 12%;
 }
-.rrd-data th:nth-child(4){
+.rrd-data th:nth-child(4) {
   width: 12%;
 }
-.rrd-data th:nth-child(5){
+.rrd-data th:nth-child(5) {
   width: 40%;
 }
-.rrd-data th:nth-child(6){
+.rrd-data th:nth-child(6) {
   width: 12%;
 }
 .rrd-data td {
@@ -213,22 +188,22 @@ video {
   font-size: 14px;
   text-align: center;
 }
-#rrd-data-data td:nth-child(1){
+#rrd-data-data td:nth-child(1) {
   width: 12%;
 }
-#rrd-data-data td:nth-child(2){
+#rrd-data-data td:nth-child(2) {
   width: 12%;
 }
-#rrd-data-data td:nth-child(3){
+#rrd-data-data td:nth-child(3) {
   width: 12%;
 }
-#rrd-data-data td:nth-child(4){
+#rrd-data-data td:nth-child(4) {
   width: 12%;
 }
-#rrd-data-data td:nth-child(5){
+#rrd-data-data td:nth-child(5) {
   width: 40%;
 }
-#rrd-data-data td:nth-child(6){
+#rrd-data-data td:nth-child(6) {
   width: 12%;
 }
 /* scroll */
@@ -252,7 +227,7 @@ video {
 
 .service-wrapper {
   width: 95%;
-  height: 20vh;
+  height: 10vh;
   margin: 0 auto;
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.1);
@@ -264,20 +239,15 @@ video {
   letter-spacing: 0.1em;
   padding: 10px 0;
 }
-.service {
-  width: 45%;
-  height: 100%;
-  margin-left: 10px;
-}
 #select-data {
   color: white;
-  background-color: rgba(59, 87, 121, 0.4)
+  background-color: rgba(59, 87, 121, 0.4);
 }
-#select-data option{
-  background-color: rgba(59, 87, 121, 0.4)
+#select-data option {
+  background-color: rgba(59, 87, 121, 0.4);
 }
 .down {
-  width: 240px;
+  width: 300px;
   height: 40px;
   /* justify-content: space-between; */
   background: radial-gradient(
@@ -288,7 +258,7 @@ video {
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid white;
-  border-radius: 10px;
+  border-radius: 5px;
   overflow: hidden;
 }
 .down h3 {
@@ -338,66 +308,13 @@ video {
   text-align: right;
 }
 
-.something {
-  width: 240px;
-  height: 40px;
-  /* justify-content: space-between; */
-  border: 1px solid white;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(59, 87, 121, 0.4) 100%
-  );
-  padding: 5px;
-  border-radius: 10px;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 10px;
-}
-.something a {
-  height: 30px;
-  padding: 2px;
-  /* border: 1px solid white;
-  border-radius: 10px; */
-  text-decoration: none;
-  color: white;
-  font-size: 13px;
-}
-.something span {
-  margin: 3px;
-  font-size: 10px;
-  margin-left: 10px;
-}
-.something:hover {
-  width: 500px;
-  cursor: pointer;
-  border-radius: 5px;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, 0.4) 0%,
-    rgba(59, 87, 121, 0.4) 100%
-  );
-  border: 1px solid white;
-}
-.something:hover .something-hide {
-  display: block;
-}
-.something-hide {
-  display: none;
-}
-.something-hide input {
-  margin-left: 30px;
-  margin-top: 18px;
-}
-
 .chart-section {
-  width: 30%;
+  width: 100%;
   height: 100%;
   /* background-color: black; */
   position: relative;
 }
-.chart-section h3{
+.chart-section h3 {
   text-align: center;
 }
 .other-section {
@@ -407,7 +324,7 @@ video {
 }
 .QnA {
   transition-duration: 0s;
-  width: 240px;
+  width: 300px;
   height: 40px;
   /* justify-content: space-between; */
   border: 1px solid white;
@@ -417,7 +334,7 @@ video {
     rgba(59, 87, 121, 0.4) 100%
   );
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   position: relative;
   /* overflow: hidden; */
@@ -442,11 +359,11 @@ video {
 .QnA-hide {
   display: none;
 }
-.QnA-hide p{
+.QnA-hide p {
   font-size: 3px;
   margin-left: 30px;
 }
-.QnA-popup{
+.QnA-popup {
   display: none;
   position: absolute;
   width: 300px;
@@ -469,7 +386,7 @@ video {
   padding: 0 1px;
   border-radius: 10px;
 }
-.QnA-popup-close{
+.QnA-popup-close {
   margin-left: 280px;
   margin-top: 5px;
   background-color: red;
@@ -479,26 +396,27 @@ video {
   border-radius: 50%;
   z-index: 2;
 }
-.QnA-popup-input{
+.QnA-popup-input {
   width: 90%;
   height: 80%;
   margin: 5px auto;
   color: black;
 }
-.QnA-popup-input textarea{
+.QnA-popup-input textarea {
   width: 100%;
   height: 100%;
 }
-#QnA-popup-submit{
+#QnA-popup-submit {
   width: 100px;
   margin-left: 100px;
   border-radius: 5px;
 }
 
 /* Chart */
-.open-chart{
+.open-chart {
   width: 100%;
-  height: 25px;
+  height: 50px;
+  margin: 10px;
   background: radial-gradient(
     circle,
     rgba(0, 0, 0, 0.4) 0%,
@@ -510,25 +428,27 @@ video {
   z-index: 1;
   margin-bottom: 10px;
 }
-.open-chart p{
+.open-chart p {
   font-size: 11px;
   letter-spacing: 4px;
   text-align: center;
 }
-.chart-1{
+.chart-1 {
   display: none;
   position: absolute;
   left: 0;
-  bottom: -100px;
   width: 600px;
   height: 600px;
+  z-index: 2;
+  top: 70px;
+  left: 70px;
 }
-.chart-1 canvas{
+.chart-1 canvas {
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   padding: 20px;
 }
-.chart1-close{
+.chart1-close {
   position: absolute;
   margin: 5px;
   right: 0;
@@ -539,20 +459,22 @@ video {
   border-radius: 50%;
   z-index: 2;
 }
-.chart-2{
+.chart-2 {
   display: none;
   position: absolute;
   left: 0;
-  bottom: -100px;
   width: 600px;
   height: 600px;
+  z-index: 2;
+  top: 70px;
+  left: 70px;
 }
-.chart-2 canvas{
+.chart-2 canvas {
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   padding: 20px;
 }
-.chart2-close{
+.chart2-close {
   position: absolute;
   margin: 5px;
   right: 0;
@@ -563,20 +485,20 @@ video {
   border-radius: 50%;
   z-index: 2;
 }
-.chart-3{
+.chart-3 {
   display: none;
   position: absolute;
   left: 0;
-  bottom: -100px;
   width: 600px;
   height: 600px;
+  z-index: 2;
 }
-.chart-3 canvas{
+.chart-3 canvas {
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   padding: 20px;
 }
-.chart3-close{
+.chart3-close {
   position: absolute;
   margin: 5px;
   right: 0;
@@ -587,20 +509,22 @@ video {
   border-radius: 50%;
   z-index: 2;
 }
-.chart-4{
+.chart-4 {
   display: none;
   position: absolute;
   left: 0;
-  bottom: -100px;
   width: 600px;
   height: 600px;
+  z-index: 2;
+  top: 70px;
+  left: 70px;
 }
-.chart-4 canvas{
+.chart-4 canvas {
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 10px;
   padding: 20px;
 }
-.chart4-close{
+.chart4-close {
   position: absolute;
   margin: 5px;
   right: 0;
@@ -612,10 +536,10 @@ video {
   z-index: 2;
 }
 
-.other-section{
+.other-section {
   margin-right: 10px;
 }
-.other-section h5{
+.other-section h5 {
   font-size: 5px;
- text-align: right; 
+  text-align: right;
 }

@@ -23,69 +23,51 @@
       <div class="col main">
         <div class="row rrd-text-wrapper">
           <div class="rrd-text">
-            <div class="row">
-              <div class="process">
-                <h3>Process</h3>
-                <h5>hover</h5>
-                <div class="process-hide">
-                  <p>
-                    1. RCSB에 매일 업데이트 되는 구조를 Protein, Homo Sapiens
-                    기준으로 확인 및 정리
-                    <br />
-                    2. 업데이트되는 데이터를 월별로 1700T 중복, ligand 결합 등을
-                    확인
-                    <br />
-                    3. 정리된 자료들을 도식화 및 데이터베이스 생성
-                  </p>
+            <div class="col">
+              <div class="row chart-section">
+                <!-- <h3>Chart View</h3> -->
+                <div class="chart-1-btn open-chart" onclick="openChart1()">
+                  <p>1700T 중복 Gene</p>
+                </div>
+                <div class="chart-1">
+                  <div class="chart1-close" onclick="Chart1Close()"></div>
+                  <canvas id="chart-1"></canvas>
+                </div>
+                <div class="chart-2-btn open-chart" onclick="openChart2()">
+                  <p>Apo Protein 제외 PDB</p>
+                </div>
+                <div class="chart-2">
+                  <div class="chart2-close" onclick="Chart2Close()"></div>
+                  <canvas id="chart-2"></canvas>
+                </div>
+                <div class="chart-4-btn open-chart" onclick="openChart4()">
+                  <p>Family별 Update된 PDB</p>
+                </div>
+                <div class="chart-4">
+                  <div class="chart4-close" onclick="Chart4Close()"></div>
+                  <canvas id="chart-4"></canvas>
                 </div>
               </div>
-              <div class="process">
-                <h3>For ADD</h3>
-                <h5>hover</h5>
-                <div class="process-hide">
-                  <p>
-                    1. RCSB 업데이트 자료로 1700T에 포합되지 않았던 화합물 구조
-                    확보
-                    <br />
-                    2. DeepMatcher의 스크리닝 대상 확장, 구조 확인을 통한 적합한
-                    모델 생성
-                  </p>
+              <div class="col search-wrapper">
+                <div class="search-bar-wrapper">
+                  <input type="text" />
+                  <input type="button" value="search" />
                 </div>
-              </div>
-              <div class="process">
-                <h3>For ADSP</h3>
-                <h5>hover</h5>
-                <div class="process-hide">
-                  <p>
-                    1. 최근 RCSB 업데이트 구조 확인
-                    <br />
-                    2. 연구 트랜드 파악 및 빠른 연구 개발 가능
-                  </p>
+                <div class="row option-wrapper">
+                  <div class="col option">
+                    <p>mutant type</p>
+                    <div class="row">
+                      <input type="checkbox" name="" id="" />
+                      <span>wild type</span>
+                    </div>
+                    <div class="row">
+                      <input type="checkbox" name="" id="" />
+                      <span>mutant type</span>
+                    </div>
+                  </div>
+                  <div class="col option"></div>
+                  <div class="col option"></div>
                 </div>
-              </div>
-            </div>
-            <div class="row effect">
-              <div class="effect-add">
-                <h2>ADD Team</h2>
-                <p>
-                  <br />
-                  RCSB 업데이트 자료로 1700T에 포함되지 않았던
-                  <br />
-                  화합물 구조 확보
-                  <br /><br />
-                  DeepMatcher의 스크리닝 대상 확장
-                  <br />
-                  구조의 Action mode 확인을 통해 적합한 모델 생성
-                </p>
-              </div>
-              <div class="effect-adsp">
-                <h2>ADSP Team</h2>
-                <p>
-                  <br />
-                  최근 RCSB 업데이트 구조 확인
-                  <br /><br />
-                  연구 트렌드 파악 및 빠른 연구 개발 가능
-                </p>
               </div>
             </div>
           </div>
@@ -114,99 +96,72 @@
           </div>
         </div>
         <div class="row service-wrapper">
-          <div class="col service">
-            <div class="row down">
-              <h3>Download Raw File</h3>
-              <span>Hover</span>
-              <div class="row down-hide">
-                <a href="" download="">download</a>
-                <select name="" id="select-data">
-                  <option value="" selected>-</option>
-                  <option value=""><a href="">All Data</a></option>
-                  <option value=""><a href="">Jan 2023</a></option>
-                  <option value=""><a href="">Feb 2023</a></option>
-                  <option value=""><a href="">Mar 2023</a></option>
-                  <option value=""><a href="">Apr 2023</a></option>
-                  <option value=""><a href="">May 2023</a></option>
-                  <option value=""><a href="">Jun 2023</a></option>
-                </select>
-              </div>
-            </div>
-            <div class="row something">
-              <a href="" download="">Somethig contents</a>
-              <span>Hover</span>
-              <div class="row something-hide">
-                <input type="checkbox" /><span>1</span>
-                <input type="checkbox" /><span>2</span>
-                <input type="checkbox" /><span>3</span>
-              </div>
-            </div>
-            <div class="row QnA">
-              <a href="">Q & A</a>
-              <span onclick="QnAOpenPopup()">Click</span>
-              <div class="row QnA-hide">
-                <p>You can request inquiries about RCSB Released Data.</p>
-              </div>
-              <div class="col QnA-popup">
-                <div
-                  class="QnA-popup-close"
-                  onclick="QnAOpenPopupClose()"
-                ></div>
-                <div class="QnA-popup-input">
-                  <textarea
-                    name=""
-                    id=""
-                    cols="30"
-                    rows="10"
-                    wrap="physical"
-                  ></textarea>
-                </div>
-                <input id="QnA-popup-submit" type="button" value="submit" />
-              </div>
+          <div class="row down">
+            <h3>Download Raw File</h3>
+            <div class="row down-hide">
+              <a href="" download="">download</a>
+              <select name="" id="select-data">
+                <option value="" selected>-</option>
+                <option value=""><a href="">All Data</a></option>
+                <option value=""><a href="">Jan 2023</a></option>
+                <option value=""><a href="">Feb 2023</a></option>
+                <option value=""><a href="">Mar 2023</a></option>
+                <option value=""><a href="">Apr 2023</a></option>
+                <option value=""><a href="">May 2023</a></option>
+                <option value=""><a href="">Jun 2023</a></option>
+              </select>
             </div>
           </div>
-          <div class="col chart-section">
-            <h3>Chart View</h3>
-            <div class="chart-1-btn open-chart" onclick="openChart1()">
-              <p>1700T 중복 Gene</p>
+          <div class="row QnA">
+            <a href="">Q & A</a>
+            <span onclick="QnAOpenPopup()">Click</span>
+            <div class="row QnA-hide">
+              <p>You can request inquiries about RCSB Released Data.</p>
             </div>
-            <div class="chart-1">
-              <div class="chart1-close" onclick="Chart1Close()"></div>
-              <canvas id="chart-1"></canvas>
+            <div class="col QnA-popup">
+              <div class="QnA-popup-close" onclick="QnAOpenPopupClose()"></div>
+              <div class="QnA-popup-input">
+                <textarea
+                  name=""
+                  id=""
+                  cols="30"
+                  rows="10"
+                  wrap="physical"
+                ></textarea>
+              </div>
+              <input
+                id="QnA-popup-submit"
+                type="button"
+                value="submit"
+                onclick="submit()"
+              />
             </div>
-            <!--  -->
-            <div class="chart-2-btn open-chart" onclick="openChart2()">
-              <p>Apo Protein 제외 PDB</p>
-            </div>
-            <div class="chart-2">
-              <div class="chart2-close" onclick="Chart2Close()"></div>
-              <canvas id="chart-2"></canvas>
-            </div>
-            <!--  -->
-            <div class="chart-3-btn open-chart" onclick="openChart3()">
-              <p>1700T에 없으나 Apo Protein인 PDB</p>
-            </div>
-            <div class="chart-3">
-              <div class="chart3-close" onclick="Chart3Close()"></div>
-              <canvas id="chart-3"></canvas>
-            </div>
-            <!--  -->
-            <div class="chart-4-btn open-chart" onclick="openChart4()">
-              <p>Family별 Update된 PDB</p>
-            </div>
-            <div class="chart-4">
-              <div class="chart4-close" onclick="Chart4Close()"></div>
-              <canvas id="chart-4"></canvas>
-            </div>
-            <!--  -->
           </div>
-          <div class="col other-section">
-            <h5>syntekabio</h5>
-            <h5>ADSP</h5>
-            <h5>ai drug development operation team</h5>
-            <h5>1700T model validation</h5>
-            <h5>model of deepmatcher</h5>
-            <h5>JeongSoo Na</h5>
+          <div class="row process">
+            <h3>Process</h3>
+            <div class="process-hide">
+              <p>
+                RCSB 업데이트 구조 확인 및 정리, 정리된 자료들을 도식화 및
+                DB생성
+              </p>
+            </div>
+          </div>
+          <div class="row process">
+            <h3>Bio Web</h3>
+            <div class="row process-hide">
+              <a href="https://www.rcsb.org/" target="_blank"
+                ><img src="img/rcsb_logo.png" alt=""
+              /></a>
+              <a href="https://www.uniprot.org/" target="_blank"
+                ><img src="img/uniprot_logo.png" alt=""
+              /></a>
+              <a href="https://www.syntekabio.com/" target="_blank"
+                ><img src="img/STB_logo_white.png" alt=""
+              /></a>
+              <a href="https://cloud.syntekabio.com/main" target="_blank"
+                ><img src="img/STB-Cloud_logo.png" alt=""
+              /></a>
+            </div>
           </div>
         </div>
       </div>
