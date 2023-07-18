@@ -111,7 +111,7 @@ function successFunction(data) {
     $("#rrd-data-data tbody *").remove();
     // load data
     var html = "";
-    for (var i = 1; i < len; i++) {
+    for (var i = 1; i < 137; i++) {
       // for (var i = 1; i < 100; i++) {
       var search = $("#search-inp").val();
       /*
