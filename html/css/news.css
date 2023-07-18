@@ -86,7 +86,9 @@ video {
   overflow: hidden;
 }
 .process h3 {
-  font-size: 17px;
+  padding: 2px;
+  font-size: 13px;
+  font-weight: 500;
 }
 .process h5 {
   font-size: 10px;
@@ -134,6 +136,64 @@ video {
   height: 200px;
   /* margin-top: 50px; */
   /* background-color: white; */
+}
+
+/* Option & Search */
+.search-wrapper{
+  border: 1px solid white;
+  border-radius: 10px;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(59, 87, 121, 0.4) 100%
+  );
+  padding: 10px;
+  width: 100%;
+}
+.search-bar-wrapper{
+  width: 100%;
+  justify-content: space-around;
+}
+#search-inp{
+  width: 70%;
+  border: 0;
+  border-radius: 15px;
+  outline: none;
+  padding-left: 10px;
+  padding: 2px;
+  background-color: rgb(233, 233, 233);
+  text-align: center;
+}
+#search-btn{
+  width: 100px;
+  /* border: none; */
+  border-radius: 15px;
+  padding: 2px;
+}
+.option-wrapper{
+  width: 100%;
+  justify-content: space-around;
+}
+.option{
+  width: 30%;
+}
+.option p{
+  font-size: 11px;
+}
+.option span{
+  font-size: 9px;
+  margin-left: 2px;
+}
+.option-month{
+  width: 60%;
+}
+.option-month p{
+  font-size: 11px;
+}
+.option-month span{
+  font-size: 10px;
+  margin-right: 20px;
+  margin-left: 2px;
 }
 
 /* data table */
@@ -339,28 +399,16 @@ video {
   position: relative;
   /* overflow: hidden; */
 }
-.QnA a {
-  /* width: 100%; */
-  height: 30px;
+.QnA h3{
   padding: 2px;
-  text-decoration: none;
-  color: white;
   font-size: 13px;
-  /* text-align: center; */
+  font-weight: 500;
 }
-/* .QnA:hover {
-  width: 500px;
-  cursor: pointer;
-  border-radius: 5px;
-} */
-/* .QnA:hover .QnA-hide {
-  display: block;
-} */
 .QnA-hide {
   display: none;
 }
 .QnA-hide p {
-  font-size: 3px;
+  font-size: 2px;
   margin-left: 30px;
 }
 .QnA-popup {

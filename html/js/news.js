@@ -91,17 +91,53 @@ function successFunction(data) {
   var colList = data.split("\n");
   var len = colList.length;
   var column = colList[0].split(",");
+
   // console.log(column);
-  // console.log(len);
+  console.log(len);
   // console.log(colList[1]);
   // console.log(colList[2].split(",")[0])
+
+  // type checkbox
+  $("#wild").click(function () {
+    $("#mutant").prop("checked", false);
+  });
+  $("#mutant").click(function () {
+    $("#wild").prop("checked", false);
+  });
+
+  // Load table
   function loadTable() {
     // table clear
     $("#rrd-data-data tbody *").remove();
     // load data
     var html = "";
+    // for (var i = 1; i < len; i++) {
     for (var i = 1; i < 100; i++) {
+      var search = $("#search-inp").val();
+      if (search != "") {
+        if (
+          !(
+            colList[i].split(",")[11].includes(search) ||
+            colList[i].split(",")[17].includes(search)
+          )
+        ) {
+          continue;
+        }
+      }
+
       // append table content
+      if (
+        $("#wild").is(":checked") &&
+        colList[i].split(",")[16].toLowerCase() != "wildtype"
+      ) {
+        continue;
+      }
+      if (
+        $("#mutant").is(":checked") &&
+        colList[i].split(",")[16].toLowerCase() != "mutant"
+      ) {
+        continue;
+      }
       html +=
         "<tr><td>" +
         colList[i].split(",")[0] + // PDB
@@ -120,6 +156,11 @@ function successFunction(data) {
     $("#rrd-data-data tbody").append(html);
   }
   loadTable();
+
+  //click search button
+  $("#search-btn").click(function () {
+    loadTable();
+  });
 }
 
 // Q&A click function
@@ -141,15 +182,13 @@ function QnAOpenPopupClose() {
     "border-radius": "5px",
   });
 }
-function submit(){
+function submit() {
   //
 
-  var confirmFlag = confirm("Q&A를 등록하시겠습니까?")
-  if(confirmFlag){
-    alert("등록 완료")
-  }
-  else{
-    
+  var confirmFlag = confirm("Q&A를 등록하시겠습니까?");
+  if (confirmFlag) {
+    alert("등록 완료");
+  } else {
   }
 }
 
@@ -162,43 +201,43 @@ const mixedChart = new Chart(ctx1, {
       {
         type: "line",
         label: "1700T 중복 Gene",
-        data: [65,71,84,87,82,85],
-        borderColor: '#FF6384',
+        data: [65, 71, 84, 87, 82, 85],
+        borderColor: "#FF6384",
         // backgroundColor: '#9BD0F5',
         // borderColor: 'rgb(54, 162, 235)'
       },
       {
         type: "bar",
         label: "Gene",
-        data: [205,317,372,357,567,486],
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        data: [205, 317, 372, 357, 567, 486],
+        backgroundColor: "rgba(255, 255, 255, 0.8)",
       },
     ],
-    labels: ["Jan", "Feb", "Mar", "Apr","May","Jun"],
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
   },
-  options:{
-    plugins:{
-      title:{
-        display:true,
+  options: {
+    plugins: {
+      title: {
+        display: true,
         text: "1700T 중복 Gene",
-        color:"white",
+        color: "white",
       },
-      legend:{
-        display:true,
-        labels:{
-          color:"white",
-        }
-      }
+      legend: {
+        display: true,
+        labels: {
+          color: "white",
+        },
+      },
     },
     scales: {
       y: {
-        ticks: { color: 'white', beginAtZero: true }
+        ticks: { color: "white", beginAtZero: true },
       },
       x: {
-        ticks: { color: 'white', beginAtZero: true }
-      }
-    }
-  }
+        ticks: { color: "white", beginAtZero: true },
+      },
+    },
+  },
 });
 // Chart 2
 const ctx2 = document.getElementById("chart-2");
@@ -208,35 +247,35 @@ const mixedChart2 = new Chart(ctx2, {
       {
         type: "bar",
         label: "Gene",
-        data: [107,161,146,125,233,162],
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+        data: [107, 161, 146, 125, 233, 162],
+        backgroundColor: "rgba(255, 255, 255, 0.8)",
       },
     ],
-    labels: ["Jan", "Feb", "Mar", "Apr","May","Jun"],
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
   },
-  options:{
-    plugins:{
-      title:{
-        display:true,
+  options: {
+    plugins: {
+      title: {
+        display: true,
         text: "1700T 미중복 Apo Protein 제외 PDB",
-        color:"white",
+        color: "white",
       },
-      legend:{
-        display:false,
-        labels:{
-          color:"white",
-        }
-      }
+      legend: {
+        display: false,
+        labels: {
+          color: "white",
+        },
+      },
     },
     scales: {
       y: {
-        ticks: { color: 'white', beginAtZero: true }
+        ticks: { color: "white", beginAtZero: true },
       },
       x: {
-        ticks: { color: 'white', beginAtZero: true }
-      }
-    }
-  }
+        ticks: { color: "white", beginAtZero: true },
+      },
+    },
+  },
 });
 // Chart 4
 const ctx4 = document.getElementById("chart-4");
@@ -245,78 +284,78 @@ const mixedChart4 = new Chart(ctx4, {
     datasets: [
       {
         type: "bar",
-        data: [977,14,255,147,305],
+        data: [977, 14, 255, 147, 305],
         backgroundColor: [
-          'rgba(255, 99, 132, 0.5)',
-          'rgba(255, 159, 64, 0.5)',
-          'rgba(255, 205, 86, 0.5)',
-          'rgba(75, 192, 192, 0.5)',
-          'rgba(54, 162, 235, 0.5)',
-          'rgba(153, 102, 255, 0.5)',
-          'rgba(201, 203, 207, 0.5)'
+          "rgba(255, 99, 132, 0.5)",
+          "rgba(255, 159, 64, 0.5)",
+          "rgba(255, 205, 86, 0.5)",
+          "rgba(75, 192, 192, 0.5)",
+          "rgba(54, 162, 235, 0.5)",
+          "rgba(153, 102, 255, 0.5)",
+          "rgba(201, 203, 207, 0.5)",
         ],
       },
     ],
-    labels: ["Kinase","Methylase","Peptease","Protease","ect"],
+    labels: ["Kinase", "Methylase", "Peptease", "Protease", "ect"],
   },
-  options:{
-    plugins:{
-      title:{
-        display:true,
+  options: {
+    plugins: {
+      title: {
+        display: true,
         text: "Family별 Update 된 PDB",
-        color:"white",
+        color: "white",
       },
-      legend:{
-        display:false,
-        labels:{
-          color:"white",
-        }
-      }
+      legend: {
+        display: false,
+        labels: {
+          color: "white",
+        },
+      },
     },
     scales: {
       y: {
-        ticks: { color: 'white', beginAtZero: true }
+        ticks: { color: "white", beginAtZero: true },
       },
       x: {
-        ticks: { color: 'white', beginAtZero: true }
-      }
-    }
-  }
+        ticks: { color: "white", beginAtZero: true },
+      },
+    },
+  },
 });
 // popup open, close
-function openChart1(){
+function openChart1() {
   $(".chart-1").show(10);
   $(".chart-2").hide(10);
   $(".chart-3").hide(10);
   $(".chart-4").hide(10);
 }
-function openChart2(){
+function openChart2() {
   $(".chart-2").show(10);
   $(".chart-1").hide(10);
   $(".chart-3").hide(10);
   $(".chart-4").hide(10);
 }
-function openChart3(){
+function openChart3() {
   $(".chart-3").show(10);
   $(".chart-1").hide(10);
   $(".chart-2").hide(10);
   $(".chart-4").hide(10);
 }
-function openChart4(){
+function openChart4() {
   $(".chart-4").show(10);
   $(".chart-1").hide(10);
   $(".chart-2").hide(10);
   $(".chart-3").hide(10);
 }
-function Chart1Close(){
+function Chart1Close() {
   $(".chart-1").hide();
 }
-function Chart2Close(){
+function Chart2Close() {
   $(".chart-2").hide();
 }
-function Chart3Close(){
+function Chart3Close() {
   $(".chart-3").hide();
 }
-function Chart4Close(){
+function Chart4Close() {
   $(".chart-4").hide();
 }

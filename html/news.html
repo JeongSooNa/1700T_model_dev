@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/news.css" />
     <title>RCSB Released Data</title>
+    <meta id="_csrf" name="_csrf" th:content="${_csrf.token}" />
+    <meta
+      id="_csrf_header"
+      name="_csrf_header"
+      th:content="${_csrf.headerName}"
+    />
   </head>
   <body>
     <div class="col container">
@@ -49,24 +55,47 @@
                 </div>
               </div>
               <div class="col search-wrapper">
-                <div class="search-bar-wrapper">
-                  <input type="text" />
-                  <input type="button" value="search" />
+                <div class="row search-bar-wrapper">
+                  <input id="search-inp" type="text" />
+                  <input id="search-btn" type="button" value="search" />
                 </div>
                 <div class="row option-wrapper">
                   <div class="col option">
-                    <p>mutant type</p>
+                    <p>mutation type</p>
                     <div class="row">
-                      <input type="checkbox" name="" id="" />
+                      <input type="checkbox" name="" id="wild" />
                       <span>wild type</span>
                     </div>
                     <div class="row">
-                      <input type="checkbox" name="" id="" />
+                      <input type="checkbox" name="" id="mutant" />
                       <span>mutant type</span>
                     </div>
                   </div>
-                  <div class="col option"></div>
-                  <div class="col option"></div>
+                  <div class="col option-month">
+                    <p>Choose month</p>
+                    <div class="col month">
+                      <div class="row month-check-1">
+                        <input type="checkbox" name="" id="jan" />
+                        <span>Jan</span>
+                        <input type="checkbox" name="" id="feb" />
+                        <span>Feb</span>
+                        <input type="checkbox" name="" id="mar" />
+                        <span>Mar</span>
+                        <input type="checkbox" name="" id="apr" />
+                        <span>Apr</span>
+                        <input type="checkbox" name="" id="may" />
+                        <span>May</span>
+                        <input type="checkbox" name="" id="jun" />
+                        <span>Jun</span>
+                        <input type="checkbox" name="" id="jul" />
+                        <span>Jul</span>
+                      </div>
+                      <div class="row month-check-2">
+                        <!-- <input type="checkbox" name="" id="" />
+                        <span>1</span> -->
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -113,10 +142,10 @@
             </div>
           </div>
           <div class="row QnA">
-            <a href="">Q & A</a>
+            <h3>Q&A</h3>
             <span onclick="QnAOpenPopup()">Click</span>
             <div class="row QnA-hide">
-              <p>You can request inquiries about RCSB Released Data.</p>
+              <p>request inquiries about RCSB Released Data.</p>
             </div>
             <div class="col QnA-popup">
               <div class="QnA-popup-close" onclick="QnAOpenPopupClose()"></div>
@@ -168,6 +197,9 @@
     </div>
   </body>
   <!-- JQuery -->
+  <!-- src="https://code.jquery.com/jquery-3.6.0.min.js" -->
+  <!-- http://code.jquery.com/jquery-latest.min.js -->
+  <!-- src="/js/jquery-3.2.1.min.js" -->
   <script
     src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
