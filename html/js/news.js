@@ -111,7 +111,7 @@ function successFunction(data) {
     $("#rrd-data-data tbody *").remove();
     // load data
     var html = "";
-    for (var i = 1; i < 220; i++) {
+    for (var i = 1; i < 523; i++) {
       // for (var i = 1; i < 100; i++) {
       var search = $("#search-inp").val();
       /*
@@ -145,6 +145,11 @@ function successFunction(data) {
       ) {
         continue;
       }
+
+      // choose month
+
+
+
       html +=
         "<tr><td>" +
         colList[i].split(",")[0] + // PDB
@@ -365,4 +370,12 @@ function Chart3Close() {
 }
 function Chart4Close() {
   $(".chart-4").hide();
+}
+
+
+// Download select event
+function selectDown(){
+  var selectedDown = $("#select-data option:selected").text();
+  console.log(selectedDown)
+   
 }
