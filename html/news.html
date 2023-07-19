@@ -128,15 +128,15 @@
           <div class="row down">
             <h3>Download Raw File</h3>
             <div class="row down-hide">
-              <a href="#none" onclick="selectDown()">download</a>
+              <a id="downloadCsv" href="#none">download</a>
               <select name="" id="select-data">
-                <option value=""><a href="./data/RCSB_released_2023_total.csv" download>All Data</a></option>
-                <option value=""><a href="./data/RCSB_released_2023_1.csv" download>Jan 2023</a></option>
-                <option value=""><a href="./data/RCSB_released_2023_2.csv" download>Feb 2023</a></option>
-                <option value=""><a href="./data/RCSB_released_2023_3.csv" download>Mar 2023</a></option>
-                <option value=""><a href="./data/RCSB_released_2023_4.csv" download>Apr 2023</a></option>
-                <option value=""><a href="./data/RCSB_released_2023_5.csv" download>May 2023</a></option>
-                <option value=""><a href="./data/RCSB_released_2023_6.csv" download>Jun 2023</a></option>
+                <option value="" onclick="selectDownAll()">All Data</option>
+                <option value="" onclick="selectDown1()">Jan 2023</option>
+                <option value="" onclick="selectDown2()">Feb 2023</option>
+                <option value="" onclick="selectDown3()">Mar 2023</option>
+                <option value="" onclick="selectDown4()">Apr 2023</option>
+                <option value="" onclick="selectDown5()">May 2023</option>
+                <option value="" onclick="selectDown6()">Jun 2023</option>
               </select>
             </div>
           </div>

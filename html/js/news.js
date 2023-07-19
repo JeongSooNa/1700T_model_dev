@@ -374,8 +374,9 @@ function Chart4Close() {
 
 
 // Download select event
-function selectDown(){
-  var selectedDown = $("#select-data option:selected").text();
-  console.log(selectedDown)
-   
+
+// Optoin tag에서 onclick 이 안되는 관계로 수정 필요.
+function selectDownAll(){
+  $("#downloadCsv").href = "./data/RCSB_released_2023_total.csv"
+  alert("!")
 }
