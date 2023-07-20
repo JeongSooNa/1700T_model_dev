@@ -375,8 +375,39 @@ function Chart4Close() {
 
 // Download select event
 
+// a tag를 change?
+$("#select-data").on("change", function(){
+  var changedVal = $("option:selected", this).text();
+  console.log(changedVal)
+  if(changedVal == 'All Data'){
+    $("#downloadCsv").prop("href","./data/RCSB_released_2023_total.csv")
+  }
+  if(changedVal == 'Jan 2023'){
+    $("#downloadCsv").prop("href","./data/RCSB_released_2023_1.csv")
+  }
+  if(changedVal == 'Feb 2023'){
+    $("#downloadCsv").prop("href","./data/RCSB_released_2023_2.csv")
+  }
+  if(changedVal == 'Mar 2023'){
+    $("#downloadCsv").prop("href","./data/RCSB_released_2023_3.csv")
+  }
+  if(changedVal == 'Apr 2023'){
+    $("#downloadCsv").prop("href","./data/RCSB_released_2023_4.csv")
+  }
+  if(changedVal == 'May 2023'){
+    $("#downloadCsv").prop("href","./data/RCSB_released_2023_5.csv")
+  }
+  if(changedVal == 'Jun 2023'){
+    $("#downloadCsv").prop("href","./data/RCSB_released_2023_6.csv")
+  }
+});
+
+
+
 // Optoin tag에서 onclick 이 안되는 관계로 수정 필요.
-function selectDownAll(){
-  $("#downloadCsv").href = "./data/RCSB_released_2023_total.csv"
-  alert("!")
-}
+// function selectDownAll(){
+//   $("#downloadCsv").href = "./data/RCSB_released_2023_total.csv"
+//   alert("!")
+// }
+
+
