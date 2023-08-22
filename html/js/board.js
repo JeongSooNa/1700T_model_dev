@@ -3,8 +3,10 @@ $(function () {
   $(".data-popup").draggable();
 });
 // Loading function
-$(".main").css("display", "block");
-$(".loading").css("display", "none");
+window.onload=function(){
+  $(".main").css("display", "block");
+  $(".loading").css("display", "none");
+}
 // setTimeout(function () {
   // $(".main").css("display", "block");
   // $(".loading").css("display", "none");
