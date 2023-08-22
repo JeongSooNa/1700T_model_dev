@@ -4,6 +4,7 @@ $(function () {
 });
 // Loading function
 $(".main").css("display", "block");
+$(".loading").css("display", "none");
 // setTimeout(function () {
   // $(".main").css("display", "block");
   // $(".loading").css("display", "none");
