@@ -1,4 +1,6 @@
-console.log("Model of DeepMatcher")
+window.onload=function(){
+  console.log("Model of DeepMatcher")
+}
 
 // move popup
 $(function () {
