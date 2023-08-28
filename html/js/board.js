@@ -1,3 +1,5 @@
+console.log("Model of DeepMatcher")
+
 // move popup
 $(function () {
   $(".data-popup").draggable();
