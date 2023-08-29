@@ -10,14 +10,14 @@ var dataFirst = {
 
 var dataSecond = {
   label: "Number of Gene",
-  data: [205, 317, 372, 357, 567, 486],
+  data: [205, 317, 372, 357, 567, 486, 707],
   lineTension: 0,
   fill: false,
   borderColor: "rgb(180, 280, 255)",
 };
 
 var speedData = {
-  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+  labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
   datasets: [dataFirst, dataSecond],
 };
 
@@ -213,7 +213,7 @@ const mixedChart = new Chart(ctx1, {
       {
         type: "line",
         label: "1700T 중복 Gene",
-        data: [65, 71, 84, 87, 82, 85],
+        data: [65, 71, 84, 87, 82, 85, 72],
         borderColor: "#FF6384",
         // backgroundColor: '#9BD0F5',
         // borderColor: 'rgb(54, 162, 235)'
@@ -221,11 +221,11 @@ const mixedChart = new Chart(ctx1, {
       {
         type: "bar",
         label: "Gene",
-        data: [205, 317, 372, 357, 567, 486],
+        data: [205, 317, 372, 357, 567, 486, 707],
         backgroundColor: "rgba(255, 255, 255, 0.8)",
       },
     ],
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
   },
   options: {
     plugins: {
@@ -259,11 +259,11 @@ const mixedChart2 = new Chart(ctx2, {
       {
         type: "bar",
         label: "Gene",
-        data: [107, 161, 146, 125, 233, 162],
+        data: [107, 161, 146, 125, 233, 162, 176],
         backgroundColor: "rgba(255, 255, 255, 0.8)",
       },
     ],
-    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"],
+    labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
   },
   options: {
     plugins: {
